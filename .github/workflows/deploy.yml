@@ -1,19 +1,16 @@
-name: CI
+name: Build and Deploy
 
 on:
-  push:
-    branches:
-      - main
-      - master
-  pull_request: {}
+  breanchs:
+    - master  
 
 concurrency:
   group: ci-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
 jobs:
-  lint:
-    name: "Lint"
+  build:
+    name: "Build"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,9 +19,9 @@ jobs:
           node-version: '16'
           cache: 'yarn'
       - run: yarn install
-      - run: yarn lint
-  test:
-    name: "Test"
+      - run: yarn build
+  deploy:
+    name: "Deploy"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -33,4 +30,8 @@ jobs:
           node-version: '16'
           cache: 'yarn'
       - run: yarn install
-      - run: yarn test
+      - run: yarn build
+      - run: yarn deploy
+        env:
+          AWS_KEY: ${{ secrets.AWS_KEY }}
+          AWS_SECRET: ${{ secrets.AWS_SECRET }}
