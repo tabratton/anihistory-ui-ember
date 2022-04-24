@@ -32,7 +32,6 @@ jobs:
           node-version: '16'
           cache: 'yarn'
       - run: yarn install
-      - run: yarn build:css
       - run: yarn deploy
         env:
           AWS_KEY: ${{ secrets.AWS_KEY }}
