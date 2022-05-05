@@ -25,6 +25,11 @@ module.exports = function (defaults) {
     app,
     Webpack,
     {
+      skipBabel: [
+        {
+          package: 'qunit',
+        },
+      ],
       packagerOptions: {
         webpackConfig: {
           externals: ({ request }, callback) => {
