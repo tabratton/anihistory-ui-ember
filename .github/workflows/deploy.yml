@@ -10,17 +10,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    name: "Build"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-          cache: 'yarn'
-      - run: yarn install
-      - run: yarn build
   deploy:
     needs: build
     name: "Deploy"
@@ -31,7 +20,7 @@ jobs:
         with:
           node-version: '16'
           cache: 'yarn'
-      - run: yarn install
+      - run: yarn ci
       - run: yarn deploy
         env:
           AWS_KEY: ${{ secrets.AWS_KEY }}
