@@ -14,6 +14,7 @@
     "build": "yarn build:css && yarn build:js",
     "build:js": "ember build --environment=production",
     "build:css": "npx tailwindcss -i ./tailwind-input.css -o ./public/tailwind.css",
+    "ci": "yarn install --frozen-lockfile",
     "deploy": "yarn build:css && ember deploy production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*:fix",
@@ -27,7 +28,7 @@
     "test:ember": "ember test"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.17.10",
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.6.0",
     "@embroider/compat": "^1.6.0",
