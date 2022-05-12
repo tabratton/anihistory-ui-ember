@@ -12,7 +12,7 @@ export default class UserService extends Service {
   get url() {
     return this.username
       ? `https://anilist.co/usr/${this.username}/animelist`
-      : undefined;
+      : '';
   }
 
   @action
@@ -34,6 +34,7 @@ export default class UserService extends Service {
 
 // DO NOT DELETE: this is how TypeScript knows how to look up your services.
 declare module '@ember/service' {
+  // eslint-disable-next-line no-unused-vars
   interface Registry {
     user: UserService;
   }

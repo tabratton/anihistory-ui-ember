@@ -131,20 +131,16 @@ export default class CreateChartAm4Modifier extends Modifier<CreateChartModifier
     series1.columns.template.propertyFields.fill = 'color';
     series1.columns.template.propertyFields.stroke = 'color';
 
-    series1.columns.template.events.on(
-      'hit',
-      (ev) => {
-        if (ev.target.dataItem) {
-          window.open(
-            `https://anilist.co/anime/${
-              (ev.target.dataItem.dataContext as AnihistoryEntry).id
-            }`,
-            '_blank'
-          );
-        }
-      },
-      this
-    );
+    series1.columns.template.events.on('hit', (ev) => {
+      if (ev.target.dataItem) {
+        window.open(
+          `https://anilist.co/anime/${
+            (ev.target.dataItem.dataContext as AnihistoryEntry).id
+          }`,
+          '_blank'
+        );
+      }
+    });
 
     internalChart.cursor = new XYCursor();
     internalChart.cursor.lineX.strokeDasharray = '';
