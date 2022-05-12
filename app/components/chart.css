@@ -1,0 +1,7 @@
+.amcharts-XYSeries .amcharts-Sprite-group .amcharts-Container-group {
+  cursor: pointer;
+}
+
+foreignObject > div {
+  white-space: unset !important;
+}

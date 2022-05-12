@@ -1,0 +1,25 @@
+.main {
+  grid: 'nav' 68px
+        'content' calc(100vh - 78px) /
+        1fr;
+  grid-row-gap: 10px;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.content {
+  grid-area: content;
+}
+
+.search-icon {
+  top: 8px;
+  right: 0.75rem;
+  height: 20px;
+  width: 20px;
+}
+
+.avatar {
+  height: 64px;
+}
