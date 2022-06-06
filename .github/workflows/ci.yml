@@ -12,18 +12,18 @@ jobs:
     name: "Install Dependencies"
     runs-on: ubuntu-latest
     steps:
-      - uses: .github/workflows/install
+      - uses: /.github/workflows/install
   lint:
     name: "Lint"
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - uses: .github/workflows/install
+      - uses: /.github/workflows/install
       - run: yarn lint
   test:
     name: "Test"
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - uses: .github/workflows/install
+      - uses: /.github/workflows/install
       - run: yarn test:ember
