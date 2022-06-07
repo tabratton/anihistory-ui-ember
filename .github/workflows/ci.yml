@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
-        if: steps.yarn-cache.outputs.cache-hit != true
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn ci
   lint:
     name: "Lint"
@@ -49,7 +49,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
-        if: steps.yarn-cache.outputs.cache-hit != true
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn ci
       - run: yarn lint
   test:
@@ -72,6 +72,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
-        if: steps.yarn-cache.outputs.cache-hit != true
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn ci
       - run: yarn test:ember
