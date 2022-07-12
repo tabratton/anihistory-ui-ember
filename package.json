@@ -37,7 +37,7 @@
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
     "@tailwindcss/forms": "^0.5.2",
-    "@types/ember-data": "^4.0.0",
+    "@types/ember-data": "^4.4.0",
     "@types/ember-data__adapter": "^4.0.0",
     "@types/ember-data__model": "^4.0.0",
     "@types/ember-data__serializer": "^4.0.0",
@@ -63,7 +63,7 @@
     "@types/ember__test-helpers": "^2.6.1",
     "@types/ember__utils": "^4.0.0",
     "@types/htmlbars-inline-precompile": "^3.0.0",
-    "@types/qunit": "^2.19.0",
+    "@types/qunit": "^2.19.2",
     "@types/rsvp": "^4.0.4",
     "@typescript-eslint/parser": "^5.28.0",
     "autoprefixer": "^10.4.7",
@@ -123,7 +123,7 @@
     "@formatjs/ecma402-abstract": "1.11.4"
   },
   "dependencies": {
-    "@amcharts/amcharts4": "^4.10.25",
+    "@amcharts/amcharts4": "^4.10.26",
     "date-fns": "^2.28.0"
   }
 }
