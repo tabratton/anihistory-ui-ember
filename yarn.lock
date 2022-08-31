@@ -1844,10 +1844,10 @@
   resolved "https://registry.yarnpkg.com/@types/cors/-/cors-2.8.12.tgz#6b2c510a7ad7039e98e7b8d3d6598f4359e5c080"
   integrity sha512-vt+kDhq/M2ayberEtJcIN/hxXy1Pk+59g2FV/ZQceeaTyCtCucjL2Q7FXlFjtWn4n15KCr1NE2lNNFhp0lEThw==
 
-"@types/ember-data@*", "@types/ember-data@^4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@types/ember-data/-/ember-data-4.4.0.tgz#de6cea2f069d7ccb65f9c332a71a397f25943772"
-  integrity sha512-3iAjaMaGFhcLWODKuygg2rd6Nf7an7lWVDmuLmpOwKxUItB0vWVQKi+QQ+6RzWRlWxadIPUM0/thn/lt2L+SrQ==
+"@types/ember-data@*", "@types/ember-data@^4.4.1":
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/@types/ember-data/-/ember-data-4.4.1.tgz#df66fcc406d42e0f7124bc3ff3c33d7cfa3b1398"
+  integrity sha512-5fLex5VrLZVvqhH4k1jC13rrDvtwoG1xAMVcgEZQbKQMDuPx/AY3rgd6mnOhrUGMyAAGOhXDmVK4Qtz8VdVvsg==
   dependencies:
     "@types/ember" "*"
     "@types/ember__object" "*"
@@ -6956,10 +6956,10 @@ eslint-config-prettier@^8.5.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.5.0.tgz#5a81680ec934beca02c7b1a61cf8ca34b66feab1"
   integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
 
-eslint-plugin-ember@^11.0.5:
-  version "11.0.5"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-11.0.5.tgz#b4a1ce7df123e6b2d18c148b9340e62d32bc6b98"
-  integrity sha512-Hc6aQ6lsdjf9xPrgO0rRY5EjTSIssUEJ4IJZU+idtexead0DX1C5hZDgG9XTKYQIYwRR3JFFC5R4h6KOPCcQRQ==
+eslint-plugin-ember@^11.0.6:
+  version "11.0.6"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-11.0.6.tgz#95fc44639b9f8f3d5a0f7a20bd06903a32194798"
+  integrity sha512-iQzqn8/GdBbNv2T3YetpjEBemoH0v9e9ea8Bu6JLOX2TN+HMK2l52/QBRFgrnaxLXBjPO3iy2c3sCieYV27EvQ==
   dependencies:
     "@ember-data/rfc395-data" "^0.0.4"
     css-tree "^2.0.4"
@@ -11051,10 +11051,10 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.1.0, postcss-value-parser@^
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^8.2.15, postcss@^8.4.14:
-  version "8.4.14"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.14.tgz#ee9274d5622b4858c1007a74d76e42e56fd21caf"
-  integrity sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==
+postcss@^8.2.15, postcss@^8.4.14, postcss@^8.4.16:
+  version "8.4.16"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.16.tgz#33a1d675fac39941f5f445db0de4db2b6e01d43c"
+  integrity sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ==
   dependencies:
     nanoid "^3.3.4"
     picocolors "^1.0.0"
