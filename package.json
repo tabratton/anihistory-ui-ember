@@ -28,7 +28,7 @@
     "test:ember": "ember test"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.10",
+    "@babel/core": "^7.18.13",
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.8.1",
     "@embroider/compat": "^1.6.0",
@@ -123,7 +123,7 @@
     "@formatjs/ecma402-abstract": "1.11.8"
   },
   "dependencies": {
-    "@amcharts/amcharts4": "^4.10.26",
+    "@amcharts/amcharts4": "^4.10.27",
     "date-fns": "^2.29.1"
   }
 }
