@@ -1849,10 +1849,10 @@
   resolved "https://registry.yarnpkg.com/@types/cors/-/cors-2.8.12.tgz#6b2c510a7ad7039e98e7b8d3d6598f4359e5c080"
   integrity sha512-vt+kDhq/M2ayberEtJcIN/hxXy1Pk+59g2FV/ZQceeaTyCtCucjL2Q7FXlFjtWn4n15KCr1NE2lNNFhp0lEThw==
 
-"@types/ember-data@*", "@types/ember-data@^4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@types/ember-data/-/ember-data-4.4.0.tgz#de6cea2f069d7ccb65f9c332a71a397f25943772"
-  integrity sha512-3iAjaMaGFhcLWODKuygg2rd6Nf7an7lWVDmuLmpOwKxUItB0vWVQKi+QQ+6RzWRlWxadIPUM0/thn/lt2L+SrQ==
+"@types/ember-data@*", "@types/ember-data@^4.4.1":
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/@types/ember-data/-/ember-data-4.4.1.tgz#df66fcc406d42e0f7124bc3ff3c33d7cfa3b1398"
+  integrity sha512-5fLex5VrLZVvqhH4k1jC13rrDvtwoG1xAMVcgEZQbKQMDuPx/AY3rgd6mnOhrUGMyAAGOhXDmVK4Qtz8VdVvsg==
   dependencies:
     "@types/ember" "*"
     "@types/ember__object" "*"
