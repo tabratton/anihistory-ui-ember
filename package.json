@@ -28,7 +28,7 @@
     "test:ember": "ember test"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.13",
+    "@babel/core": "^7.19.0",
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.8.1",
     "@embroider/compat": "^1.6.0",
@@ -50,9 +50,9 @@
     "@types/ember__controller": "^4.0.0",
     "@types/ember__debug": "^4.0.1",
     "@types/ember__destroyable": "4.0.0",
-    "@types/ember__engine": "^4.0.1",
+    "@types/ember__engine": "^4.0.2",
     "@types/ember__error": "^4.0.0",
-    "@types/ember__object": "^4.0.3",
+    "@types/ember__object": "^4.0.4",
     "@types/ember__polyfills": "^4.0.0",
     "@types/ember__routing": "^4.0.9",
     "@types/ember__runloop": "^4.0.1",
