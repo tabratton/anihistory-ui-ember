@@ -1978,10 +1978,10 @@
   resolved "https://registry.yarnpkg.com/@types/ember__destroyable/-/ember__destroyable-4.0.0.tgz#997af44863323979796fbd153e9ad76498defb33"
   integrity sha512-QxyRhCOlQmc056tbWvHOQZ7vIjlFOFYMOU82P3pcCFfxyi55+NRhj4ySruymcBCfrzKQmVQLCbbOGhyFMLqq0Q==
 
-"@types/ember__engine@*", "@types/ember__engine@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@types/ember__engine/-/ember__engine-4.0.1.tgz#ec44f405f199b80df888f4676626ba0977557d16"
-  integrity sha512-j6T/7raHSZoF1rUjNK3QpDAtKMOOqvQog+VhSDJn0Z5BKeIPHdNmEId25aVuRm9/2Ch2qY1Fe4an3ZorwHvLpQ==
+"@types/ember__engine@*", "@types/ember__engine@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@types/ember__engine/-/ember__engine-4.0.2.tgz#01a93c38dce6940a7199435c8ab200c965ba8b73"
+  integrity sha512-x9c8LtRpYwQnyUiUbGpF2+zrZiA0G3e0lPsprghllWEabnIyvN+GMdtnvt4DmpGQVeUz6JKVdoPAmENBUTTcyg==
   dependencies:
     "@types/ember-resolver" "*"
     "@types/ember__engine" "*"
@@ -1993,10 +1993,10 @@
   resolved "https://registry.yarnpkg.com/@types/ember__error/-/ember__error-4.0.0.tgz#c73037e65c1c3d7060b97f98135ba73c712972b1"
   integrity sha512-1WVMR65/QTqPzMWafK2vKEwGafILxRxItbWJng6eEJyKDHRvvHFCl3XzJ4dQjdFcfOlozsn0mmEYCpjKoyzMqA==
 
-"@types/ember__object@*", "@types/ember__object@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@types/ember__object/-/ember__object-4.0.3.tgz#c8410863e5950a0bd84708ce5a7224335002870e"
-  integrity sha512-25vYl0SBgZ7wGem16ELJ+rtA/sNMNnbFgNzDomA33qtc7tXgbiwTlGQh1HWoN5y7yiqdfMGZcFCLVWD+t5gjfw==
+"@types/ember__object@*", "@types/ember__object@^4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@types/ember__object/-/ember__object-4.0.4.tgz#646a4b56d1d8279d8b21cd8e8265886a569fb87d"
+  integrity sha512-RwiyzQXKTyFVfZvrYQYtZhfrYAXrNEvtO98vdlzak0MHaks/AkOSNxuTU4tjhfzto4dOcfr6mi8C5mN+yz7LFQ==
   dependencies:
     "@types/ember" "*"
     "@types/ember__object" "*"
@@ -6112,10 +6112,10 @@ ember-cli-htmlbars@^5.7.1:
     strip-bom "^4.0.0"
     walk-sync "^2.2.0"
 
-ember-cli-htmlbars@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-6.1.0.tgz#97150c2a6f9a981475599d74817df66f5d816c2b"
-  integrity sha512-kT+MA2JsNLk10HpxAjpB5HHtR0WCoxZEUwLsy/BBww5lXmsrf34QzmTw7SL6DabZVxs+YCb9RhU9KTmFygGxCg==
+ember-cli-htmlbars@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-6.1.1.tgz#f5b588572a5d18ad087560122b8dabc90145173d"
+  integrity sha512-DKf2rjzIVw9zWCuFsBGJScrgf5Mz7dSg08Cq+FWFYIxnpssINUbNUoB0NHWnUJK4QqCvaExOyOmjm0kO455CPg==
   dependencies:
     "@ember/edition-utils" "^1.2.0"
     babel-plugin-ember-template-compilation "^1.0.0"
