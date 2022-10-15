@@ -34,8 +34,8 @@
     "@embroider/compat": "^1.6.0",
     "@embroider/core": "^1.6.0",
     "@embroider/webpack": "^1.6.0",
-    "@glimmer/component": "^1.0.4",
-    "@glimmer/tracking": "^1.0.4",
+    "@glimmer/component": "^1.1.2",
+    "@glimmer/tracking": "^1.1.2",
     "@tailwindcss/forms": "^0.5.2",
     "@types/ember-data": "^4.4.1",
     "@types/ember-data__adapter": "^4.0.0",
@@ -70,10 +70,10 @@
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^2.4.2",
-    "ember-cli": "~4.6.0",
+    "ember-cli": "~4.7.0",
     "ember-cli-app-version": "^5.0.0",
     "ember-cli-babel": "^7.26.11",
-    "ember-cli-dependency-checker": "^3.2.0",
+    "ember-cli-dependency-checker": "^3.3.1",
     "ember-cli-deploy": "^1.0.2",
     "ember-cli-deploy-aws-pack": "^3.0.0",
     "ember-cli-deploy-display-revisions": "^2.1.2",
@@ -85,16 +85,15 @@
     "ember-cli-terser": "^4.0.2",
     "ember-cli-typescript": "^5.1.0",
     "ember-cli-typescript-blueprints": "^3.0.0",
-    "ember-data": "~4.6.1",
-    "ember-export-application-global": "^2.0.1",
-    "ember-fetch": "^8.1.1",
+    "ember-data": "~4.7.1",
+    "ember-fetch": "^8.1.2",
     "ember-intl": "^5.7.2",
     "ember-load-initializers": "^2.1.2",
     "ember-modifier": "^3.2.7",
     "ember-page-title": "^7.0.0",
     "ember-qunit": "^5.1.5",
     "ember-resolver": "^8.0.3",
-    "ember-source": "~4.6.0",
+    "ember-source": "~4.7.0",
     "ember-template-lint": "^4.14.0",
     "ember-truth-helpers": "^3.1.1",
     "eslint": "^8.23.0",
@@ -111,10 +110,10 @@
     "qunit-dom": "^2.0.0",
     "tailwindcss": "^3.1.8",
     "typescript": "^4.7.4",
-    "webpack": "^5.73.0"
+    "webpack": "^5.74.0"
   },
   "engines": {
-    "node": "12.* || 14.* || >= 16"
+    "node": "14.* || >= 16"
   },
   "ember": {
     "edition": "octane"
