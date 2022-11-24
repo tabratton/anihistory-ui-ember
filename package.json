@@ -122,7 +122,7 @@
     "@formatjs/ecma402-abstract": "1.11.8"
   },
   "dependencies": {
-    "@amcharts/amcharts4": "^4.10.29",
+    "@amcharts/amcharts4": "^4.10.30",
     "date-fns": "^2.29.3"
   }
 }
