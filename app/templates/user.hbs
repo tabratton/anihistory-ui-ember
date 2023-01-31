@@ -38,23 +38,23 @@
               {{t "chart.language.title"}}
             </label>
             <div class="inline-block relative w-64">
-              <Select 
+              <Select
                 id="lang-select"
                 class="block w-full"
-                {{on "change" this.updateLang}} as |s|
+                {{on "change" this.updateLang}}
               >
-                <s.Opt value="user" selected={{eq this.lang "user"}}>
+                <Option value="user" selected={{eq this.lang "user"}}>
                   {{t "chart.language.user"}}
-                </s.Opt>
-                <s.Opt value="english" selected={{eq this.lang "english"}}>
+                </Option>
+                <Option value="english" selected={{eq this.lang "english"}}>
                   {{t "chart.language.english"}}
-                </s.Opt>
-                <s.Opt value="romaji" selected={{eq this.lang "romaji"}}>
+                </Option>
+                <Option value="romaji" selected={{eq this.lang "romaji"}}>
                   {{t "chart.language.romaji"}}
-                </s.Opt>
-                <s.Opt value="native" selected={{eq this.lang "native"}}>
+                </Option>
+                <Option value="native" selected={{eq this.lang "native"}}>
                   {{t "chart.language.native"}}
-                </s.Opt>
+                </Option>
               </Select>
             </div>
           </div>
