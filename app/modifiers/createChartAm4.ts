@@ -94,33 +94,33 @@ export default class CreateChartAm4Modifier extends Modifier<CreateChartModifier
     series1.columns.template.tooltipHTML = '';
     series1.columns.template.adapter.add('tooltipHTML', (/*html, context*/) => {
       return `
-              <div class="flex flex-col items-center justify-center w-96">
-                  <h4 class="text-2xl font-bold mb-2">{${lang}}</h4>
-                  <span class="flex justify-between w-full">
-                      <span class="font-bold mr-1">${this.intl.t(
+              <div class="d-flex flex-column align-items-center justify-content-center" style="width:24rem;">
+                  <h4>{${lang}}</h4>
+                  <span class="d-flex justify-content-between w-100">
+                      <span class="fw-bold me-2">${this.intl.t(
                         'chart.started'
                       )}</span>
                       <span>{openDateX}</span>
                   </span>
-                  <span class="flex justify-between w-full">
-                      <span class="font-bold mr-1">${this.intl.t(
+                  <span class="d-flex justify-content-between w-100">
+                      <span class="fw-bold me-2">${this.intl.t(
                         'chart.finished'
                       )}</span>
                       <span>{displayEndDay}</span>
                   </span>
-                  <span class="flex justify-between w-full">
-                      <span class="font-bold mr-1">${this.intl.t(
+                  <span class="d-flex justify-content-between w-100">
+                      <span class="fw-bold me-2">${this.intl.t(
                         'chart.score'
                       )}</span>
                       <span>{score}</span>
                   </span>
-                  <span class="flex justify-between w-full">
-                      <span class="font-bold mr-1">${this.intl.t(
+                  <span class="d-flex justify-content-between w-100">
+                      <span class="fw-bold me-2">${this.intl.t(
                         'chart.average'
                       )}</span>
                       <span>{average}</span>
                   </span>
-                  <span class="mt-2">{description}</span>
+                  <p class="mt-2">{description}</p>
               </div>
              `;
     });

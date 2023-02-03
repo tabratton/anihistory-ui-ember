@@ -4,9 +4,6 @@ import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 
 import type UserService from 'anihistory-ui-ember/services/user';
-
-import './application.css';
-
 export default class Application extends Controller {
   @service declare user: UserService;
 

@@ -1,0 +1,17 @@
+@import "_bootstrap.scss";
+
+@import "application";
+@import "chart";
+@import "loading";
+
+.bg-gray-800 {
+  background-color: $gray-800;
+}
+
+.bg-dark-light {
+  background-color: lighten($dark, 3);
+}
+
+.bg-opacity-05 {
+  --bs-bg-opacity: 5%;
+}
