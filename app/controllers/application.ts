@@ -10,18 +10,7 @@ import './application.css';
 export default class Application extends Controller {
   @service declare user: UserService;
 
-  @tracked username = '';
-
   @tracked mobileMenuOpen = false;
-
-  @action
-  goToUser() {
-    this.user.goTo(this.user.username);
-
-    if (this.mobileMenuOpen) {
-      this.mobileMenuOpen = false;
-    }
-  }
 }
 
 // DO NOT DELETE: this is how TypeScript knows how to look up your controllers.

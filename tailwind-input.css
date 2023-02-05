@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ember-power-select-dropdown {
+  @apply bg-dark-base text-white border-gray-500 !important;
+}
+
+.ember-basic-dropdown-content--below {
+  border-top: 1px solid !important;
+  margin-top: -1px;
+  @apply border-t-gray-500 !important;
+}
+
+.ember-power-select-options {
+  @apply bg-gray-800 !important;
+}
+
+.ember-power-select-search {
+  @apply bg-gray-800 p-0 !important;
+}
+
+.ember-power-select-option {
+  @apply bg-white bg-opacity-5 hover:bg-opacity-10 flex gap-1 border border-x-0 border-gray-500 p-2 !important;
+}
+
+.ember-power-select-option:last-child {
+  @apply border-b-0 !important;
+}
+
+.ember-power-select-search-input {
+  @apply text-white bg-white bg-opacity-5 placeholder-gray-400 placeholder-opacity-65 focus:ring-0 border border-t-0 border-x-0 border-gray-500 focus:border-main-600 py-2 px-3 placeholder:italic !important;
+}
+
+.ember-power-select-trigger {
+  @apply text-white bg-white bg-opacity-5 placeholder-gray-400 placeholder-opacity-65 border border-gray-500 py-2 px-3 placeholder:italic !important;
+}
+
+.ember-power-select-status-icon {
+  @apply hidden;
+}
+
+.ember-power-select-option--search-message {
+  @apply bg-gray-800 !important;
+}
+
+.ember-power-select-selected-item {
+  @apply flex items-center gap-1 !important;
+  margin-left: -0.25rem !important;
+}

@@ -9,38 +9,48 @@
     >
       {{t "project_name"}}
     </LinkTo>
-    {{#if (and this.user.username this.user.avatar)}}
+    {{#if this.user.selectedUser}}
       <div class="hidden md:flex items-center justify-between">
         <img
           class="avatar rounded"
-          src={{this.user.avatar}}
-          alt={{this.user.username}}
+          src={{this.user.selectedUser.avatar.large}}
+          alt={{this.user.selectedUser.name}}
         >
         <a
           class="text-main-500 ml-2"
           href={{this.user.url}}
           target="_blank" rel="noopener noreferrer"
         >
-          {{this.user.username}}
+          {{this.user.selectedUser.name}}
         </a>
       </div>
     {{/if}}
-    <section class="hidden md:flex flex-nowrap items-center h-full">
-      <div class="relative">
+    <section class="hidden md:flex flex-nowrap items-center h-full w-64">
+      <div class="relative flex-grow">
         <label
           class="sr-only"
-          for="user-search"
+          for="user-search-2"
         >
           {{t "navigation-bar.username"}}
         </label>
-        <StyledInput
-          id="user-search"
-          class="w-full"
-          type="text"
-          placeholder={{t "navigation-bar.username"}}
-          @value={{this.user.username}}
-          @enter={{fn this.user.goTo this.user.username}}
-        />
+        <PowerSelect
+          @search={{perform this.user.searchUsers}}
+          @searchEnabled={{true}}
+          @selected={{this.user.selectedUser}}
+          @onChange={{this.user.updateUser}}
+          @placeholder={{t "navigation-bar.username"}}
+          @matchTriggerWidth={{false}}
+          as |user|
+        >
+          <span class="w-10 flex items-center justify-center">
+            <img
+              class="avatar-small rounded-lg"
+              src={{user.avatar.medium}}
+              role="presentation"
+            >
+          </span>
+          {{user.name}}
+        </PowerSelect>
         <FaIcon class="absolute search-icon text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
       </div>
     </section>
@@ -51,19 +61,19 @@
       {{#if this.mobileMenuOpen}}
         <div class="absolute top-0 right-0 w-[85%] h-full bg-gray-900 z-10">
           <div class="flex justify-between p-4">
-            {{#if (and this.user.username this.user.avatar)}}
+            {{#if this.user.selectedUser}}
               <div class="hidden md:flex items-center justify-between">
                 <img
                   class="avatar rounded"
-                  src={{this.user.avatar}}
-                  alt={{this.user.username}}
+                  src={{this.user.selectedUser.avatar.large}}
+                  alt={{this.user.selectedUser.name}}
                 >
                 <a
                   class="text-main-500 ml-2"
                   href={{this.user.url}}
                   target="_blank" rel="noopener noreferrer"
                 >
-                  {{this.user.username}}
+                  {{this.user.selectedUser.name}}
                 </a>
               </div>
             {{/if}}
@@ -72,21 +82,31 @@
             </Button>
           </div>
           <section class="flex flex-nowrap items-center w-full p-4">
-            <div class="relative">
+            <div class="relative flex-grow">
               <label
                 class="sr-only"
-                for="user-search"
+                for="user-search-2"
               >
                 {{t "navigation-bar.username"}}
               </label>
-              <StyledInput
-                id="user-search-mobile"
-                class="w-full"
-                type="text"
-                placeholder={{t "navigation-bar.username"}}
-                @value={{this.user.username}}
-                @enter={{this.goToUser}}
-              />
+              <PowerSelect
+                @search={{perform this.user.searchUsers}}
+                @searchEnabled={{true}}
+                @selected={{this.user.selectedUser}}
+                @onChange={{this.user.updateUser}}
+                @placeholder={{t "navigation-bar.username"}}
+                @matchTriggerWidth={{false}}
+                as |user|
+              >
+                <span class="w-10 flex items-center justify-center">
+                  <img
+                    class="avatar-small rounded-lg"
+                    src={{user.avatar.medium}}
+                    role="presentation"
+                  >
+                </span>
+                {{user.name}}
+              </PowerSelect>
               <FaIcon class="absolute search-icon text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
             </div>
           </section>

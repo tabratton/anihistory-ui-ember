@@ -1,3 +1,4 @@
+import { action } from '@ember/object';
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 import {
@@ -19,6 +20,7 @@ import type { AnihistoryEntry } from 'anihistory-ui-ember/interfaces/AnihistoryE
 import type { AnilistList } from 'anihistory-ui-ember/interfaces/AnilistList';
 import type { AnilistEntry } from 'anihistory-ui-ember/interfaces/AnilistEntry';
 import type UserService from 'anihistory-ui-ember/services/user';
+import type { UserResponse } from 'anihistory-ui-ember/services/user';
 
 interface UserParams {
   username: string;
@@ -41,6 +43,7 @@ export default class UserRoute extends Route {
   @service declare intl: IntlService;
   @service declare user: UserService;
 
+  @action
   handleError(response: Response, error: SimpleError) {
     if (!error.type) {
       error.type = response.status === 404 ? 'NotFound' : 'Unavail';
@@ -50,27 +53,6 @@ export default class UserRoute extends Route {
           : this.intl.t('messages.unavail')
       );
     }
-  }
-
-  async getUserInfo(username: string, error: SimpleError) {
-    const response = await fetch('https://graphql.anilist.co', {
-      method: 'post',
-      headers: {
-        'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
-      },
-      body: `query=query {User(name: "${username}") {id name avatar { large } } }`,
-    });
-    if (response.status !== 200) {
-      this.handleError(response, error);
-      return;
-    }
-    const data = await response.json();
-    const {
-      data: {
-        User: { avatar, id },
-      },
-    } = data;
-    return { avatar: avatar.large, id };
   }
 
   async getListInfo(id: Number, error: SimpleError) {
@@ -146,11 +128,13 @@ export default class UserRoute extends Route {
       messages: [],
     };
 
-    const { avatar, id } = (await this.getUserInfo(username, error)) || {};
+    const user = await this.user.getUserInfo(username, error, this.handleError);
 
-    this.user.update(username, avatar);
+    if (!user) return;
 
-    const list = await this.getListInfo(id, error);
+    this.user.update(user);
+
+    const list = await this.getListInfo(user.id, error);
 
     const dateRangeErrors: Array<string> = [];
 
