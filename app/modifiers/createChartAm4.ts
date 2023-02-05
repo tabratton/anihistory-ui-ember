@@ -77,7 +77,8 @@ export default class CreateChartAm4Modifier extends Modifier<CreateChartModifier
     categoryAxis.renderer.grid.template.stroke = color('#78716C');
     categoryAxis.renderer.inversed = true;
     categoryAxis.renderer.fontSize = 12;
-    categoryAxis.renderer.labels.template.disabled = true;
+    categoryAxis.renderer.labels.template.fill = color('#FFFFFF');
+    categoryAxis.renderer.labels.template.opacity = 0.87;
     categoryAxis.cursorTooltipEnabled = false;
 
     const dateAxis = internalChart.xAxes.push(new DateAxis());

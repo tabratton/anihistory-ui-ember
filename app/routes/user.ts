@@ -81,40 +81,45 @@ export default class UserRoute extends Route {
 
   createGroupCategories(list: Array<AnihistoryEntry>) {
     const rows: Array<Array<AnihistoryEntry>> = [[]];
+    let currentRowIndex = 0;
 
     list.forEach((listElement) => {
       // Check each row for each list element to make sure all possible gaps are filled
-      rows.forEach((row, index) => {
-        if (listElement.category) return;
-
-        const length = row.length;
+      while (!listElement.category) {
+        const row = rows[currentRowIndex];
 
         // If there's no other elements there can't be date range conflicts
-        if (length === 0) {
-          listElement.category = `${index}`;
+        if (row?.length === 0) {
+          listElement.category = `${currentRowIndex + 1}`;
           row.push(listElement);
+          currentRowIndex = 0;
           return;
         }
 
         // Find out if there are any elements that have date range conflicts in this row
         const conflictInRow = row
-          .map((rowElement) =>
+          ?.map((rowElement) =>
             areIntervalsOverlapping(
               { start: rowElement.startDay, end: rowElement.endDay },
               { start: listElement.startDay, end: listElement.endDay }
             )
           )
-          .reduce((a, b) => a || b);
+          ?.reduce((a, b) => a || b);
 
         // If no conflicts, add the current element to the row,
         // otherwise add a new row if this is the last row
         if (!conflictInRow) {
-          listElement.category = `${index}`;
-          row.push(listElement);
-        } else if (!rows[index + 1]) {
-          rows.push([]);
+          listElement.category = `${currentRowIndex + 1}`;
+          row?.push(listElement);
+          currentRowIndex = 0;
+        } else {
+          if (!rows[currentRowIndex + 1]) {
+            rows.push([]);
+          }
+
+          currentRowIndex++;
         }
-      });
+      }
     });
 
     return rows;
