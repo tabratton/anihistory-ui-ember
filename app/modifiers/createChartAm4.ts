@@ -40,7 +40,7 @@ export default class CreateChartAm4Modifier extends Modifier<CreateChartModifier
 
   chart?: XYChart;
 
-  constructor(owner: unknown, args: ArgsFor<CreateChartModifierSignature>) {
+  constructor(owner: any, args: ArgsFor<CreateChartModifierSignature>) {
     super(owner, args);
     registerDestructor(this, cleanup);
   }
