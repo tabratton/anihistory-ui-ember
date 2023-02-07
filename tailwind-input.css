@@ -24,6 +24,10 @@
   @apply bg-white bg-opacity-5 hover:bg-opacity-10 flex gap-1 border border-x-0 border-gray-500 p-2 !important;
 }
 
+.ember-power-select-option[aria-current="true"] {
+  @apply bg-opacity-10 !important;
+}
+
 .ember-power-select-option:last-child {
   @apply border-b-0 !important;
 }
