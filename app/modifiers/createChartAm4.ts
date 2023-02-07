@@ -22,6 +22,8 @@ import { inject as service } from '@ember/service';
 import type IntlService from 'ember-intl/services/intl';
 import Modifier, { ArgsFor, PositionalArgs, NamedArgs } from 'ember-modifier';
 
+import type Owner from '@ember/owner';
+
 import type { AnihistoryEntry } from 'anihistory-ui-ember/interfaces/AnihistoryEntry';
 import type { CreateChartModifierSignature } from 'anihistory-ui-ember/interfaces/CreateChartModifierSignature';
 
@@ -40,7 +42,7 @@ export default class CreateChartAm4Modifier extends Modifier<CreateChartModifier
 
   chart?: XYChart;
 
-  constructor(owner: any, args: ArgsFor<CreateChartModifierSignature>) {
+  constructor(owner: Owner, args: ArgsFor<CreateChartModifierSignature>) {
     super(owner, args);
     registerDestructor(this, cleanup);
   }
