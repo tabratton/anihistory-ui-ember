@@ -20,7 +20,6 @@ import type { AnihistoryEntry } from 'anihistory-ui-ember/interfaces/AnihistoryE
 import type { AnilistList } from 'anihistory-ui-ember/interfaces/AnilistList';
 import type { AnilistEntry } from 'anihistory-ui-ember/interfaces/AnilistEntry';
 import type UserService from 'anihistory-ui-ember/services/user';
-import type { UserResponse } from 'anihistory-ui-ember/services/user';
 
 interface UserParams {
   username: string;
@@ -96,15 +95,14 @@ export default class UserRoute extends Route {
           return;
         }
 
-        // Find out if there are any elements that have date range conflicts in this row
-        const conflictInRow = row
-          ?.map((rowElement) =>
-            areIntervalsOverlapping(
-              { start: rowElement.startDay, end: rowElement.endDay },
+        // Find out if the last item in the row has a date range conflict
+        const lastItem = row?.[row.length - 1];
+        const conflictInRow = lastItem
+          ? areIntervalsOverlapping(
+              { start: lastItem.startDay, end: lastItem.endDay },
               { start: listElement.startDay, end: listElement.endDay }
             )
-          )
-          ?.reduce((a, b) => a || b);
+          : true;
 
         // If no conflicts, add the current element to the row,
         // otherwise add a new row if this is the last row
