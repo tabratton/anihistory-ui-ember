@@ -4,7 +4,6 @@ import {
   create,
   options,
   percent,
-  ResizeButton,
   Scrollbar,
   useTheme,
 } from '@amcharts/amcharts4/core';
@@ -19,13 +18,7 @@ import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import theme from '@amcharts/amcharts4/themes/spiritedaway';
 import { registerDestructor } from '@ember/destroyable';
 import { inject as service } from '@ember/service';
-import type IntlService from 'ember-intl/services/intl';
-import Modifier, { ArgsFor, PositionalArgs, NamedArgs } from 'ember-modifier';
-
-import type Owner from '@ember/owner';
-
-import type { AnihistoryEntry } from 'anihistory-ui-ember/interfaces/AnihistoryEntry';
-import type { CreateChartModifierSignature } from 'anihistory-ui-ember/interfaces/CreateChartModifierSignature';
+import Modifier from 'ember-modifier';
 
 options.autoSetClassName = true;
 useTheme(am4themesAnimated);
@@ -33,33 +26,25 @@ useTheme(am4themesAnimated);
 const colorSet = new ColorSet();
 theme(colorSet);
 
-function cleanup(instance: CreateChartAm4Modifier) {
+function cleanup(instance) {
   instance.chart?.dispose();
 }
 
-export default class CreateChartAm4Modifier extends Modifier<CreateChartModifierSignature> {
-  @service declare intl: IntlService;
+export default class CreateChartAm4Modifier extends Modifier {
+  @service intl;
 
-  chart?: XYChart;
+  chart;
 
-  constructor(owner: Owner, args: ArgsFor<CreateChartModifierSignature>) {
+  constructor(owner, args) {
     super(owner, args);
     registerDestructor(this, cleanup);
   }
 
-  modify(
-    element: HTMLElement,
-    _positional: PositionalArgs<CreateChartModifierSignature>,
-    { list, lang }: NamedArgs<CreateChartModifierSignature>
-  ) {
+  modify(element, _positional, { list, lang }) {
     this.createChart(element, list, lang);
   }
 
-  createChart(
-    element: HTMLElement,
-    list: Array<AnihistoryEntry>,
-    lang: string
-  ) {
+  createChart(element, list, lang) {
     this.chart?.dispose();
 
     const internalChart = create(element, XYChart);
@@ -137,9 +122,7 @@ export default class CreateChartAm4Modifier extends Modifier<CreateChartModifier
     series1.columns.template.events.on('hit', (ev) => {
       if (ev.target.dataItem) {
         window.open(
-          `https://anilist.co/anime/${
-            (ev.target.dataItem.dataContext as AnihistoryEntry).id
-          }`,
+          `https://anilist.co/anime/${ev.target.dataItem.dataContext.id}`,
           '_blank'
         );
       }
@@ -153,7 +136,7 @@ export default class CreateChartAm4Modifier extends Modifier<CreateChartModifier
     internalChart.scrollbarX = new Scrollbar();
     internalChart.scrollbarY = new Scrollbar();
 
-    function customizeGrip(grip: ResizeButton) {
+    function customizeGrip(grip) {
       grip.icon.disabled = true;
       grip.background.fill = color('#E5E7EB');
       grip.background.fillOpacity = 1;

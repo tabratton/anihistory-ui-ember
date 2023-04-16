@@ -13,37 +13,14 @@ import {
   parseISO,
   startOfDay,
 } from 'date-fns';
-import type IntlService from 'ember-intl/services/intl';
 import fetch from 'fetch';
 
-import type { AnihistoryEntry } from 'anihistory-ui-ember/interfaces/AnihistoryEntry';
-import type { AnilistList } from 'anihistory-ui-ember/interfaces/AnilistList';
-import type { AnilistEntry } from 'anihistory-ui-ember/interfaces/AnilistEntry';
-import type UserService from 'anihistory-ui-ember/services/user';
-
-interface UserParams {
-  username: string;
-}
-
-interface SimpleError {
-  type: 'NotFound' | 'Unavail' | 'DateRange' | null;
-  messages: Array<string>;
-}
-
-export type UserRouteModel = {
-  userData: {
-    username: string;
-    list: Array<AnihistoryEntry>;
-  };
-  error: SimpleError;
-};
-
 export default class UserRoute extends Route {
-  @service declare intl: IntlService;
-  @service declare user: UserService;
+  @service intl;
+  @service user;
 
   @action
-  handleError(response: Response, error: SimpleError) {
+  handleError(response, error) {
     if (!error.type) {
       error.type = response.status === 404 ? 'NotFound' : 'Unavail';
       error.messages.push(
@@ -54,7 +31,7 @@ export default class UserRoute extends Route {
     }
   }
 
-  async getListInfo(id: Number, error: SimpleError) {
+  async getListInfo(id, error) {
     const response = await fetch('https://graphql.anilist.co', {
       method: 'post',
       headers: {
@@ -73,13 +50,13 @@ export default class UserRoute extends Route {
       },
     } = data;
     return [
-      ...lists.find((e: AnilistList) => e.name === 'Completed').entries,
-      ...lists.find((e_1: AnilistList) => e_1.name === 'Watching').entries,
+      ...lists.find((e) => e.name === 'Completed').entries,
+      ...lists.find((e_1) => e_1.name === 'Watching').entries,
     ];
   }
 
-  createGroupCategories(list: Array<AnihistoryEntry>) {
-    const rows: Array<Array<AnihistoryEntry>> = [[]];
+  createGroupCategories(list) {
+    const rows = [[]];
     let currentRowIndex = 0;
 
     list.forEach((listElement) => {
@@ -123,10 +100,10 @@ export default class UserRoute extends Route {
     return rows;
   }
 
-  async model(params: UserParams) {
+  async model(params) {
     const username = params.username;
 
-    const error: SimpleError = {
+    const error = {
       type: null,
       messages: [],
     };
@@ -139,9 +116,9 @@ export default class UserRoute extends Route {
 
     const list = await this.getListInfo(user.id, error);
 
-    const dateRangeErrors: Array<string> = [];
+    const dateRangeErrors = [];
 
-    const mappedList = list?.map((e: AnilistEntry) => {
+    const mappedList = list?.map((e) => {
       const mapped = {
         average: e.media.averageScore / 10,
         cover: e.media.coverImage.large,
