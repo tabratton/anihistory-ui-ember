@@ -1,6 +1,8 @@
+/* stylelint-disable selector-class-pattern */
 .amcharts-XYSeries .amcharts-Sprite-group .amcharts-Container-group {
   cursor: pointer;
 }
+/* stylelint-enable selector-class-pattern */
 
 foreignObject > div {
   white-space: unset !important;

@@ -21,47 +21,43 @@ module.exports = function (defaults) {
     // },
   });
 
-  return require('@embroider/compat').compatBuild(
-    app,
-    Webpack,
-    {
-      skipBabel: [
-        {
-          package: 'qunit',
+  return require('@embroider/compat').compatBuild(app, Webpack, {
+    skipBabel: [
+      {
+        package: 'qunit',
+      },
+    ],
+    packagerOptions: {
+      webpackConfig: {
+        externals: ({ request }, callback) => {
+          if (/xlsx|canvg|pdfmake/.test(request)) {
+            return callback(null, `commonjs ${request}`);
+          }
+          callback();
         },
-      ],
-      packagerOptions: {
-        webpackConfig: {
-          externals: ({ request }, callback) => {
-            if (/xlsx|canvg|pdfmake/.test(request)) {
-              return callback(null, `commonjs ${request}`);
-            }
-            callback();
-          },
-          // module: {
-          //   rules: [
-          //     {
-          //       test: /\.css$/,
-          //       exclude: /node_modules/,
-          //       use: [
-          //         {
-          //           loader: 'style-loader',
-          //         },
-          //         {
-          //           loader: 'css-loader',
-          //           options: {
-          //             importLoaders: 1,
-          //           },
-          //         },
-          //         {
-          //           loader: 'postcss-loader',
-          //         },
-          //       ],
-          //     },
-          //   ],
-          // },
-        },
+        // module: {
+        //   rules: [
+        //     {
+        //       test: /\.css$/,
+        //       exclude: /node_modules/,
+        //       use: [
+        //         {
+        //           loader: 'style-loader',
+        //         },
+        //         {
+        //           loader: 'css-loader',
+        //           options: {
+        //             importLoaders: 1,
+        //           },
+        //         },
+        //         {
+        //           loader: 'postcss-loader',
+        //         },
+        //       ],
+        //     },
+        //   ],
+        // },
       },
     },
-  );
+  });
 };
