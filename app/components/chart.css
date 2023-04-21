@@ -6,4 +6,5 @@
 
 foreignObject > div {
   white-space: unset !important;
+  max-width: 500px;
 }
