@@ -11,7 +11,7 @@ export default class UserService extends Service {
 
   get url() {
     return this.selectedUser?.name
-      ? `https://anilist.co/usr/${this.selectedUser.name}/animelist`
+      ? `https://anilist.co/user/${this.selectedUser.name}/animelist`
       : '';
   }
 
