@@ -97,7 +97,7 @@
     "edition": "octane"
   },
   "dependencies": {
-    "@amcharts/amcharts4": "^4.10.35",
+    "@amcharts/amcharts4": "^4.10.36",
     "date-fns": "^2.30.0"
   }
 }
