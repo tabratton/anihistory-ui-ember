@@ -3,7 +3,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  content: ['./app/**/*.{ts,hbs,html}'],
+  content: ['./app/**/*.{ts,hbs,html,js,gjs,gts}'],
   theme: {
     colors: {
       main: colors.fuchsia,
