@@ -1,5 +1,5 @@
+import { hash } from '@ember/helper';
 import FaIcon from '@fortawesome/ember-fontawesome/components/fa-icon';
-import { hash } from "@ember/helper";
 
 const Option = <template>
   <option

@@ -26,7 +26,7 @@ export default class UserRoute extends Route {
       error.messages.push(
         response.status === 404
           ? this.intl.t('messages.not_found')
-          : this.intl.t('messages.unavail')
+          : this.intl.t('messages.unavail'),
       );
     }
   }
@@ -77,7 +77,7 @@ export default class UserRoute extends Route {
         const conflictInRow = lastItem
           ? areIntervalsOverlapping(
               { start: lastItem.startDay, end: lastItem.endDay },
-              { start: listElement.startDay, end: listElement.endDay }
+              { start: listElement.startDay, end: listElement.endDay },
             )
           : true;
 
@@ -127,8 +127,8 @@ export default class UserRoute extends Route {
           ? parseISO(
               `${e.completedAt.year}-${String(e.completedAt.month).padStart(
                 2,
-                '0'
-              )}-${String(e.completedAt.day).padStart(2, '0')}`
+                '0',
+              )}-${String(e.completedAt.day).padStart(2, '0')}`,
             )
           : null,
         english: e.media.title.english,
@@ -140,8 +140,8 @@ export default class UserRoute extends Route {
           ? parseISO(
               `${e.startedAt.year}-${String(e.startedAt.month).padStart(
                 2,
-                '0'
-              )}-${String(e.startedAt.day).padStart(2, '0')}`
+                '0',
+              )}-${String(e.startedAt.day).padStart(2, '0')}`,
             )
           : null,
         user_title: e.media.title.userPreferred,
@@ -159,7 +159,7 @@ export default class UserRoute extends Route {
       realStartDay = addHours(startOfDay(realStartDay), 12);
 
       const realEndDay = startOfDay(
-        mapped.end_day ? mapped.end_day : new Date()
+        mapped.end_day ? mapped.end_day : new Date(),
       );
       const chartEndDay = addHours(addDays(realEndDay, 1), 12);
 
@@ -174,7 +174,7 @@ export default class UserRoute extends Route {
             start: formatISO(realStartDay, { representation: 'date' }),
             end: formatISO(realEndDay, { representation: 'date' }),
             name: mapped.user_title,
-          })
+          }),
         );
       }
 
@@ -202,7 +202,7 @@ export default class UserRoute extends Route {
       }
     } else if (mappedList) {
       this.createGroupCategories(
-        mappedList.sort((a, b) => compareAsc(a.startDay, b.startDay))
+        mappedList.sort((a, b) => compareAsc(a.startDay, b.startDay)),
       );
     }
 

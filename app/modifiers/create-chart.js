@@ -86,25 +86,25 @@ export default class CreateChartAm4Modifier extends Modifier {
                   <h4 class="text-2xl font-bold mb-2">{${lang}}</h4>
                   <span class="flex justify-between w-full">
                       <span class="font-bold mr-1">${this.intl.t(
-                        'chart.started'
+                        'chart.started',
                       )}</span>
                       <span>{openDateX}</span>
                   </span>
                   <span class="flex justify-between w-full">
                       <span class="font-bold mr-1">${this.intl.t(
-                        'chart.finished'
+                        'chart.finished',
                       )}</span>
                       <span>{displayEndDay}</span>
                   </span>
                   <span class="flex justify-between w-full">
                       <span class="font-bold mr-1">${this.intl.t(
-                        'chart.score'
+                        'chart.score',
                       )}</span>
                       <span>{score}</span>
                   </span>
                   <span class="flex justify-between w-full">
                       <span class="font-bold mr-1">${this.intl.t(
-                        'chart.average'
+                        'chart.average',
                       )}</span>
                       <span>{average}</span>
                   </span>
@@ -123,7 +123,7 @@ export default class CreateChartAm4Modifier extends Modifier {
       if (ev.target.dataItem) {
         window.open(
           `https://anilist.co/anime/${ev.target.dataItem.dataContext.id}`,
-          '_blank'
+          '_blank',
         );
       }
     });
