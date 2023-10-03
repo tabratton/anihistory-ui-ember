@@ -2,6 +2,7 @@
 /dist/
 /tmp/
 /public/tailwind.css
+/declarations/
 
 # dependencies
 /node_modules/

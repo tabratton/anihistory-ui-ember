@@ -37,19 +37,20 @@
                 id="lang-select"
                 class="block w-full"
                 {{on "change" this.updateLang}}
+                as |s|
               >
-                <Option value="user" selected={{eq this.lang "user"}}>
+                <s.Option value="user" selected={{eq this.lang "user"}}>
                   {{t "chart.language.user"}}
-                </Option>
-                <Option value="english" selected={{eq this.lang "english"}}>
+                </s.Option>
+                <s.Option value="english" selected={{eq this.lang "english"}}>
                   {{t "chart.language.english"}}
-                </Option>
-                <Option value="romaji" selected={{eq this.lang "romaji"}}>
+                </s.Option>
+                <s.Option value="romaji" selected={{eq this.lang "romaji"}}>
                   {{t "chart.language.romaji"}}
-                </Option>
-                <Option value="native" selected={{eq this.lang "native"}}>
+                </s.Option>
+                <s.Option value="native" selected={{eq this.lang "native"}}>
                   {{t "chart.language.native"}}
-                </Option>
+                </s.Option>
               </Select>
             </div>
           </div>
