@@ -15,12 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: pnpm/action-setup@v2
         with:
-          node-version: 18.17
-          cache: npm
-      - run: npm ci
-      - run: npm run deploy
+          version: 8
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm run deploy
         env:
           AWS_KEY: ${{ secrets.AWS_KEY }}
           AWS_SECRET: ${{ secrets.AWS_SECRET }}
