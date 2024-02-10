@@ -4,22 +4,7 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const { Webpack } = require('@embroider/webpack');
 
 module.exports = function (defaults) {
-  const app = new EmberApp(defaults, {
-    // postcssOptions: {
-    //   compile: {
-    //     enabled: true,
-    //     cacheInclude: [/.*\.(css|scss)$/],
-    //     plugins: [
-    //       { module: require('postcss-import') },
-    //       { module: require('postcss-nested') },
-    //     ],
-    //   },
-    //   filter: {
-    //     enabled: true,
-    //     plugins: [{ module: require('autoprefixer') }],
-    //   },
-    // },
-  });
+  const app = new EmberApp(defaults, {});
 
   function isProduction() {
     return EmberApp.env() === 'production';
