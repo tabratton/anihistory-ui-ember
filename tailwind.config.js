@@ -1,9 +1,10 @@
-/* eslint-disable no-undef */
-
 const colors = require('tailwindcss/colors');
+const path = require('node:path');
+const appEntry = path.join(__dirname, 'app');
+const relevantFilesGlob = '**/*.{html,js,ts,hbs,gjs,gts}';
 
 module.exports = {
-  content: ['./app/**/*.{ts,hbs,html,js,gjs,gts}'],
+  content: [path.join(appEntry, relevantFilesGlob)],
   theme: {
     colors: {
       main: colors.fuchsia,
