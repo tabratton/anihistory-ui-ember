@@ -1,4 +1,4 @@
-{{(page-title "AniHistory")}}
+{{page-title "AniHistory"}}
 
 <div class="main grid">
   <div class="nav bg-gray-800 justify-self-stretch self-stretch w-full px-4 flex flex-wrap items-center justify-between">
@@ -7,7 +7,7 @@
       @route="application"
       {{on "click" this.user.wipe}}
     >
-      {{(t "project_name")}}
+      {{t "project_name"}}
     </LinkTo>
     {{#if this.user.selectedUser}}
       <div class="hidden md:flex items-center justify-between">
@@ -32,14 +32,14 @@
           class="sr-only"
           for="user-search-2"
         >
-          {{(t "navigation-bar.username")}}
+          {{t "navigation-bar.username"}}
         </label>
         <PowerSelect
           @search={{perform this.user.searchUsers}}
           @searchEnabled={{true}}
           @selected={{this.user.selectedUser}}
           @onChange={{this.user.updateUser}}
-          @placeholder={{(t "navigation-bar.username")}}
+          @placeholder={{t "navigation-bar.username"}}
           @matchTriggerWidth={{false}}
           as |user|
         >
@@ -89,14 +89,14 @@
                 class="sr-only"
                 for="user-search-2"
               >
-                {{(t "navigation-bar.username")}}
+                {{t "navigation-bar.username"}}
               </label>
               <PowerSelect
                 @search={{perform this.user.searchUsers}}
                 @searchEnabled={{true}}
                 @selected={{this.user.selectedUser}}
                 @onChange={{this.user.updateUser}}
-                @placeholder={{(t "navigation-bar.username")}}
+                @placeholder={{t "navigation-bar.username"}}
                 @matchTriggerWidth={{false}}
                 as |user|
               >

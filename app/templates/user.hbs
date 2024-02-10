@@ -1,7 +1,7 @@
 <div class="user rounded-md justify-self-stretch flex flex-col p-2 h-full">
   <div class="bg-white bg-opacity-7 p-4 text-white flex items-center justify-between">
     <h4 class="text-2xl font-bold">
-      {{(t "chart.title")}}
+      {{t "chart.title"}}
     </h4>
     <Button type="button" {{on "click" this.refresh}}>
       <FaIcon @icon="arrows-rotate" @fixedWidth={{true}} />
@@ -18,7 +18,7 @@
           {{/each}}
           {{#if (eq this.error "DateRange")}}
             <a class="text-main-500 text-sm" href={{this.user.url}} target="_blank" rel="noopener noreferrer">
-              {{(t "messages.anilist_instructions")}}
+              {{t "messages.anilist_instructions"}}
             </a>
           {{/if}}
         </div>
@@ -30,7 +30,7 @@
         <div class="controls grid items-center justify-items-center">
           <div class="language text-center flex flex-col">
             <label class="sr-only" for="lang-select">
-              {{(t "chart.language.title")}}
+              {{t "chart.language.title"}}
             </label>
             <div class="inline-block relative w-64">
               <Select
@@ -40,16 +40,16 @@
                 as |s|
               >
                 <s.Option value="user" selected={{eq this.lang "user"}}>
-                  {{(t "chart.language.user")}}
+                  {{t "chart.language.user"}}
                 </s.Option>
                 <s.Option value="english" selected={{eq this.lang "english"}}>
-                  {{(t "chart.language.english")}}
+                  {{t "chart.language.english"}}
                 </s.Option>
                 <s.Option value="romaji" selected={{eq this.lang "romaji"}}>
-                  {{(t "chart.language.romaji")}}
+                  {{t "chart.language.romaji"}}
                 </s.Option>
                 <s.Option value="native" selected={{eq this.lang "native"}}>
-                  {{(t "chart.language.native")}}
+                  {{t "chart.language.native"}}
                 </s.Option>
               </Select>
             </div>
