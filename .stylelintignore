@@ -6,7 +6,5 @@
 /tmp/
 /public/
 
-/tailwind-input.css
-
 # addons
 /.node_modules.ember-try/
