@@ -134,8 +134,8 @@ devDependencies:
     specifier: ^8.1.2
     version: 8.1.2
   ember-intl:
-    specifier: ^6.1.2
-    version: 6.4.0(@babel/core@7.23.9)(webpack@5.90.3)
+    specifier: ^6.4.1
+    version: 6.4.1(@babel/core@7.23.9)(webpack@5.90.3)
   ember-load-initializers:
     specifier: ^2.1.2
     version: 2.1.2(@babel/core@7.23.9)
@@ -7213,8 +7213,8 @@ packages:
       - supports-color
     dev: true
 
-  /ember-intl@6.4.0(@babel/core@7.23.9)(webpack@5.90.3):
-    resolution: {integrity: sha512-BXxscjgoqzXQ6tUSV8aJsQcUAIcfqLJnNjegarFWdBBHLEOffQ8xARhvQC0hW40zGi/RHFEyTTx7vbiCPGtP1A==}
+  /ember-intl@6.4.1(@babel/core@7.23.9)(webpack@5.90.3):
+    resolution: {integrity: sha512-gnui6bgwM9pPEpdHud20h3tteopPuJ29tb5BqPck2WU6yMxkeLIpZC4LcfTZ/IQ0n1dH/wDaCCpsp/G3APtAxg==}
     engines: {node: 16.* || >= 18}
     peerDependencies:
       typescript: ^4.8.0 || ^5.0.0
