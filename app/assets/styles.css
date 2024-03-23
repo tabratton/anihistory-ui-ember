@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .ember-power-select-dropdown {
-  @apply bg-dark-base border-l border-r rounded overflow-hidden shadow-none text-white border-gray-500 !important;
+  @apply bg-dark-base border-l border-r rounded overflow-hidden shadow-none text-white border-gray-500;
 }
 
 /* stylelint-disable selector-class-pattern */
