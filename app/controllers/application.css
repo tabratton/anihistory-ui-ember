@@ -14,13 +14,6 @@
   grid-area: content;
 }
 
-.search-icon {
-  top: 1rem;
-  right: 1rem;
-  height: 1rem;
-  width: 1rem;
-}
-
 .avatar {
   height: 64px;
 }

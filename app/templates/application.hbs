@@ -52,7 +52,7 @@
           </span>
           {{user.name}}
         </PowerSelect>
-        <FaIcon class="absolute search-icon text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
+        <FaIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
       </div>
     </section>
     <div class="md:hidden text-white text-opacity-80">
@@ -109,7 +109,7 @@
                 </span>
                 {{user.name}}
               </PowerSelect>
-              <FaIcon class="absolute search-icon text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
+              <FaIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
             </div>
           </section>
         </div>
@@ -121,3 +121,5 @@
     {{outlet}}
   </div>
 </div>
+
+<BasicDropdownWormhole />

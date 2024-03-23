@@ -4,7 +4,13 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const { Webpack } = require('@embroider/webpack');
 
 module.exports = function (defaults) {
-  const app = new EmberApp(defaults, {});
+  const app = new EmberApp(defaults, {
+    babel: {
+      plugins: [
+        require.resolve('ember-concurrency/async-arrow-task-transform'),
+      ],
+    },
+  });
 
   function isProduction() {
     return EmberApp.env() === 'production';
