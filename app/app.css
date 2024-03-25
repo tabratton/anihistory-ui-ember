@@ -3,12 +3,16 @@
 @tailwind utilities;
 
 .ember-power-select-dropdown {
-  @apply bg-dark-base border-l border-r rounded overflow-hidden shadow-none text-white border-gray-500;
+  @apply bg-dark-base border-l border-r rounded overflow-hidden shadow-none text-white !important;
+}
+
+.ember-power-select-dropdown {
+  @apply border-gray-500 !important;
 }
 
 /* stylelint-disable selector-class-pattern */
 .ember-basic-dropdown-content--below {
-  @apply border-t border-b border-gray-500 mt-[-1px] rounded-t-none border-solid;
+  @apply mt-[-1px] border-solid;
 }
 /* stylelint-enable selector-class-pattern */
 
@@ -21,7 +25,7 @@
 }
 
 .ember-power-select-option {
-  @apply bg-white bg-opacity-5 hover:bg-opacity-10 flex gap-1 border border-x-0 border-gray-500 p-2 cursor-pointer items-center;
+  @apply bg-white bg-opacity-5 hover:bg-opacity-10 flex gap-1 border border-x-0 border-gray-500 p-2 cursor-pointer items-center !important;
 }
 
 .ember-power-select-option[aria-current="true"] {
@@ -33,7 +37,7 @@
 }
 
 .ember-power-select-search-input {
-  @apply text-white bg-white bg-opacity-5 placeholder-gray-400 placeholder-opacity-65 focus:ring-0 border border-t-0 border-x-0 border-gray-500 focus:border-main-600 py-2 px-3 placeholder:italic !important;
+  @apply text-white bg-white bg-opacity-5 placeholder-gray-400 placeholder-opacity-65 focus:ring-0 border border-t-0 border-x-0 border-gray-500 focus:border-main-600 placeholder:italic !important;
 }
 
 .ember-power-select-trigger {
@@ -45,7 +49,7 @@
 }
 
 .ember-power-select-placeholder {
-  @apply ml-2 text-gray-400 block overflow-x-hidden whitespace-nowrap overflow-ellipsis;
+  @apply ml-2 text-gray-400 block overflow-x-hidden whitespace-nowrap overflow-ellipsis !important;
 }
 
 .ember-power-select-status-icon {
@@ -60,8 +64,4 @@
 
 .ember-power-select-selected-item {
   @apply flex items-center gap-1 ml-[-0.25rem];
-}
-
-.ember-power-select-visually-hidden {
-  @apply hidden;
 }

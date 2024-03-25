@@ -4,7 +4,8 @@ import loadInitializers from 'ember-load-initializers';
 import config from 'anihistory-ui-ember/config/environment';
 
 import 'ember-basic-dropdown/styles';
-import './assets/styles.css';
+import 'ember-power-select/styles';
+import './app.css';
 
 export default class App extends Application {
   modulePrefix = config.modulePrefix;
