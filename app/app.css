@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 .ember-power-select-dropdown {
-  @apply bg-dark-base border-l border-r rounded overflow-hidden shadow-none text-white !important;
-}
-
-.ember-power-select-dropdown {
-  @apply border-gray-500 !important;
+  @apply bg-dark-base border-l border-r rounded overflow-hidden shadow-none text-white border-gray-500 !important;
 }
 
 /* stylelint-disable selector-class-pattern */
@@ -44,10 +40,6 @@
   @apply text-white leading-7 bg-white bg-opacity-5 border border-gray-500 py-2 px-3 placeholder:italic cursor-pointer rounded relative overflow-x-hidden min-h-7 !important;
 }
 
-.ember-power-select-trigger.ember-basic-dropdown-trigger--below {
-  @apply rounded-b-none !important;
-}
-
 .ember-power-select-placeholder {
   @apply ml-2 text-gray-400 block overflow-x-hidden whitespace-nowrap overflow-ellipsis !important;
 }
@@ -57,6 +49,10 @@
 }
 
 /* stylelint-disable selector-class-pattern */
+.ember-power-select-trigger.ember-basic-dropdown-trigger--below {
+  @apply rounded-b-none !important;
+}
+
 .ember-power-select-option--search-message {
   @apply bg-gray-800 cursor-default hover:bg-gray-800 !important;
 }
