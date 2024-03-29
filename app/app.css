@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-.ember-power-select-dropdown {
-  @apply bg-dark-base border-l border-r rounded overflow-hidden shadow-none text-white border-gray-500 !important;
+.avatar {
+  @apply h-[2.875rem];
 }
 
-/* stylelint-disable selector-class-pattern */
-.ember-basic-dropdown-content--below {
-  @apply mt-[-1px] border-solid;
+.avatar-small {
+  @apply h-7;
 }
-/* stylelint-enable selector-class-pattern */
+
+.ember-power-select-dropdown {
+  @apply bg-dark-base rounded-b border-gray-500 !important;
+}
 
 .ember-power-select-options {
   @apply bg-gray-800;
@@ -21,11 +23,11 @@
 }
 
 .ember-power-select-option {
-  @apply bg-white bg-opacity-5 hover:bg-opacity-10 flex gap-1 border border-x-0 border-gray-500 p-2 cursor-pointer items-center !important;
-}
+  @apply bg-gray-800 hover:bg-gray-700 flex gap-1 border-gray-500 p-2 cursor-pointer items-center !important;
 
-.ember-power-select-option[aria-current="true"] {
-  @apply bg-opacity-10;
+  &:not(:last-child) {
+    @apply border-b;
+  }
 }
 
 .ember-power-select-option:last-child {
@@ -33,15 +35,15 @@
 }
 
 .ember-power-select-search-input {
-  @apply text-white bg-white bg-opacity-5 placeholder-gray-400 placeholder-opacity-65 focus:ring-0 border border-t-0 border-x-0 border-gray-500 focus:border-main-600 placeholder:italic !important;
+  @apply text-white bg-gray-800 placeholder-gray-400 placeholder-opacity-65 focus:ring-0 border border-t-0 border-x-0 border-gray-500 focus:border-main-600 placeholder:italic !important;
 }
 
 .ember-power-select-trigger {
-  @apply text-white leading-7 bg-white bg-opacity-5 border border-gray-500 py-2 px-3 placeholder:italic cursor-pointer rounded relative overflow-x-hidden min-h-7 !important;
+  @apply text-white leading-7 bg-gray-800 border border-gray-500 py-2 px-3 placeholder:italic cursor-pointer rounded relative overflow-x-hidden min-h-7 !important;
 }
 
 .ember-power-select-placeholder {
-  @apply ml-2 text-gray-400 block overflow-x-hidden whitespace-nowrap overflow-ellipsis !important;
+  @apply text-gray-400 !important;
 }
 
 .ember-power-select-status-icon {

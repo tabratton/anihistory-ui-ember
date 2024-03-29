@@ -1,7 +1,7 @@
 {{page-title "AniHistory"}}
 
-<div class="main grid">
-  <div class="nav bg-gray-800 justify-self-stretch self-stretch w-full px-4 flex flex-wrap items-center justify-between">
+<div class="relative bg-[inherit] w-full h-full">
+  <nav class="max-h-[3.875rem] sticky top-0 bg-gray-800 shadow-lg p-2 flex items-center justify-between">
     <LinkTo
       class="font-mono italic text-white text-lg"
       @route="application"
@@ -26,21 +26,14 @@
         </a>
       </div>
     {{/if}}
-    <section class="hidden md:flex flex-nowrap items-center h-full w-64">
-      <div class="relative flex-grow">
-        <label
-          class="sr-only"
-          for="user-search-2"
-        >
-          {{t "navigation-bar.username"}}
-        </label>
+    <section class="hidden md:flex flex-nowrap items-center h-full">
+      <div class="relative w-64">
         <PowerSelect
           @search={{perform this.user.searchUsers}}
           @searchEnabled={{true}}
           @selected={{this.user.selectedUser}}
           @onChange={{this.user.updateUser}}
           @placeholder={{t "navigation-bar.username"}}
-          @matchTriggerWidth={{false}}
           as |user|
         >
           <span class="w-10 flex items-center justify-center">
@@ -92,6 +85,7 @@
                 {{t "navigation-bar.username"}}
               </label>
               <PowerSelect
+                @triggerId="user-search-2"
                 @search={{perform this.user.searchUsers}}
                 @searchEnabled={{true}}
                 @selected={{this.user.selectedUser}}
@@ -115,9 +109,9 @@
         </div>
       {{/if}}
     </div>
-  </div>
+  </nav>
 
-  <div class="content justify-self-stretch self-stretch h-full px-4">
+  <div class="h-[calc(100dvh_-_3.875rem_+_1px)] px-4">
     {{outlet}}
   </div>
 </div>
