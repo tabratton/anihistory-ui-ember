@@ -113,8 +113,8 @@ devDependencies:
     specifier: ^3.0.0
     version: 3.0.0
   ember-cli-deploy-s3:
-    specifier: ^4.0.1
-    version: 4.0.1
+    specifier: ^4.0.4
+    version: 4.0.4
   ember-cli-deploy-s3-index:
     specifier: ^3.0.0
     version: 3.0.0
@@ -5056,7 +5056,7 @@ packages:
     resolution: {integrity: sha512-xq+q3SRMOxGivLhBNaUdC64hDTQwejJ+H0T/NB1XMtTVEwNTrfFF3gAxiyW0Bu/xWEGhjVKgUcMhCrUy2+uCWg==}
     dependencies:
       base64-js: 1.5.1
-      ieee754: 1.1.13
+      ieee754: 1.2.1
       isarray: 1.0.0
     dev: true
 
@@ -6802,8 +6802,8 @@ packages:
       rsvp: 4.8.5
     dev: true
 
-  /ember-cli-deploy-s3@4.0.1:
-    resolution: {integrity: sha512-H3ECnLvcF7SkMjap7vzEcMBkHek4X5EIr3libZtf+SJWn3nmEKALH6UtKLmHirApwwIWUPFXDWVDSAQj4sTFoQ==}
+  /ember-cli-deploy-s3@4.0.4:
+    resolution: {integrity: sha512-vmQegTbgfVHdBAPYZxwMFXOgcs4GRBL2e650veNH7xT2oJwxCFmP96kSBkL1kMpUKl5LIwSqddSNSSfEWCDf5g==}
     engines: {node: 14.x || 16.x || 18.x || >= 20.*}
     dependencies:
       aws-sdk: 2.1550.0
@@ -13007,7 +13007,6 @@ packages:
 
   /sax@1.3.0:
     resolution: {integrity: sha512-0s+oAmw9zLl1V1cS9BtZN7JAd0cW5e0QH4W3LWEK6a4LaLEA2OTpGYWDY+6XasBLtz6wkm3u1xRw95mRuJ59WA==}
-    dev: false
 
   /saxes@5.0.1:
     resolution: {integrity: sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==}
@@ -15040,7 +15039,7 @@ packages:
     resolution: {integrity: sha512-T4rieHaC1EXcES0Kxxj4JWgaUQHDk+qwHcYOCFHfiwKz7tOVPLq7Hjq9dM1WCMhylqMEfP7hMcOIChvotiZegA==}
     engines: {node: '>=4.0.0'}
     dependencies:
-      sax: 1.2.1
+      sax: 1.3.0
       xmlbuilder: 11.0.1
     dev: true
 
