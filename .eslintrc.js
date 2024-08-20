@@ -50,9 +50,33 @@ module.exports = {
       extends: ['plugin:n/recommended'],
     },
     {
-      // test files
-      files: ['tests/**/*-test.{js,ts}'],
-      extends: ['plugin:qunit/recommended'],
+      files: ['**/*.js'],
+      plugins: ['ember'],
+      extends: [
+        'eslint:recommended',
+        'plugin:ember/recommended', // or other configuration
+      ],
+      rules: {
+        // override / enable optional rules
+        'ember/no-replace-test-comments': 'error',
+      },
+    },
+    {
+      files: ['**/*.gjs'],
+      parser: 'ember-eslint-parser',
+      plugins: ['ember'],
+      extends: [
+        'eslint:recommended',
+        'plugin:ember/recommended',
+        'plugin:ember/recommended-gjs',
+      ],
+    },
+    {
+      files: ['tests/**/*.{js,gjs}'],
+      rules: {
+        // override / enable optional rules
+        'ember/no-replace-test-comments': 'error',
+      },
     },
   ],
 };
