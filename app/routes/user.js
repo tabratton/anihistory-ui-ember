@@ -1,19 +1,8 @@
 import { action } from '@ember/object';
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
-import {
-  addDays,
-  addHours,
-  areIntervalsOverlapping,
-  compareAsc,
-  isBefore,
-  isSameHour,
-  isSameDay,
-  formatISO,
-  parseISO,
-  startOfDay,
-} from 'date-fns';
 import fetch from 'fetch';
+import { DateTime, Interval } from 'luxon';
 
 export default class UserRoute extends Route {
   @service intl;
@@ -75,9 +64,8 @@ export default class UserRoute extends Route {
         // Find out if the last item in the row has a date range conflict
         const lastItem = row?.[row.length - 1];
         const conflictInRow = lastItem
-          ? areIntervalsOverlapping(
-              { start: lastItem.startDay, end: lastItem.endDay },
-              { start: listElement.startDay, end: listElement.endDay },
+          ? Interval.fromDateTimes(lastItem.startDay, lastItem.endDay).overlaps(
+              Interval.fromDateTimes(listElement.startDay, listElement.endDay),
             )
           : true;
 
@@ -124,12 +112,11 @@ export default class UserRoute extends Route {
         cover: e.media.coverImage.large,
         description: e.media.description,
         end_day: e.completedAt.year
-          ? parseISO(
-              `${e.completedAt.year}-${String(e.completedAt.month).padStart(
-                2,
-                '0',
-              )}-${String(e.completedAt.day).padStart(2, '0')}`,
-            )
+          ? DateTime.fromObject({
+              year: e.completedAt.year,
+              month: e.completedAt.month,
+              day: e.completedAt.day,
+            })
           : null,
         english: e.media.title.english,
         id: e.media.id,
@@ -137,12 +124,11 @@ export default class UserRoute extends Route {
         romaji: e.media.title.romaji,
         score: e.scoreRaw / 10,
         start_day: e.startedAt.year
-          ? parseISO(
-              `${e.startedAt.year}-${String(e.startedAt.month).padStart(
-                2,
-                '0',
-              )}-${String(e.startedAt.day).padStart(2, '0')}`,
-            )
+          ? DateTime.fromObject({
+              year: e.startedAt.year,
+              month: e.startedAt.month,
+              day: e.startedAt.day,
+            })
           : null,
         user_title: e.media.title.userPreferred,
       };
@@ -156,23 +142,21 @@ export default class UserRoute extends Route {
         realStartDay = new Date();
       }
 
-      realStartDay = addHours(startOfDay(realStartDay), 12);
+      realStartDay = realStartDay.startOf('day').plus({ hours: 12 });
 
-      const realEndDay = startOfDay(
-        mapped.end_day ? mapped.end_day : new Date(),
-      );
-      const chartEndDay = addHours(addDays(realEndDay, 1), 12);
+      const realEndDay = (mapped.end_day || DateTime.now()).startOf('day');
+      const chartEndDay = realEndDay.plus({ days: 1, hours: 12 });
 
       if (
-        isBefore(chartEndDay, realStartDay) ||
-        (isSameDay(chartEndDay, realStartDay) &&
-          isSameHour(chartEndDay, realStartDay))
+        chartEndDay - realStartDay < 0 ||
+        (chartEndDay.hasSame(realStartDay, 'day') &&
+          chartEndDay.hasSame(realStartDay, 'hour'))
       ) {
         error.type = 'DateRange';
         dateRangeErrors.push(
           this.intl.t('messages.invalid_date', {
-            start: formatISO(realStartDay, { representation: 'date' }),
-            end: formatISO(realEndDay, { representation: 'date' }),
+            start: realStartDay.toLocaleString(),
+            end: realEndDay.toLocaleString(),
             name: mapped.user_title,
           }),
         );
@@ -202,7 +186,7 @@ export default class UserRoute extends Route {
       }
     } else if (mappedList) {
       this.createGroupCategories(
-        mappedList.sort((a, b) => compareAsc(a.startDay, b.startDay)),
+        mappedList.sort((a, b) => a.startDay - b.startDay),
       );
     }
 

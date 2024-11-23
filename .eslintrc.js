@@ -50,7 +50,7 @@ module.exports = {
       extends: ['plugin:n/recommended'],
     },
     {
-      files: ['**/*.js'],
+      files: ['**/*.{js}'],
       plugins: ['ember'],
       extends: [
         'eslint:recommended',

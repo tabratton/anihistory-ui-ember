@@ -50,10 +50,14 @@ export default class CreateChartAm4Modifier extends Modifier {
     const internalChart = create(element, XYChart);
 
     internalChart.data = list.map((item) => {
-      return {
+      const obj = {
         color: colorSet.next(),
         ...item,
       };
+      obj.startDay = obj.startDay.toJSDate();
+      obj.endDay = obj.endDay.toJSDate();
+      obj.displayEndDay = obj.displayEndDay.toJSDate();
+      return obj;
     });
     internalChart.paddingRight = 30;
 
