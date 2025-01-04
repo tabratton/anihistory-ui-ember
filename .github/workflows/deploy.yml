@@ -18,8 +18,8 @@ jobs:
       - uses: wyvox/action-setup-pnpm@v3
       - run: pnpm run deploy
         env:
-          AWS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           CLOUDFRONT_DISTRIBUTION: ${{ vars.CLOUDFRONT_DISTRIBUTION }}
           BUCKET: ${{ vars.BUCKET }}
           REGION: ${{ vars.REGION }}
