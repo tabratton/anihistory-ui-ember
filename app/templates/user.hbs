@@ -3,11 +3,39 @@
     <h4 class="text-2xl font-bold">
       {{t "chart.title"}}
     </h4>
+    <div class="controls grid items-center justify-items-center">
+      <div class="language text-center flex flex-col">
+        <label class="sr-only" for="lang-select">
+          {{t "chart.language.title"}}
+        </label>
+        <div class="inline-block relative w-64">
+          <Select
+            id="lang-select"
+            class="block w-full"
+            {{on "change" this.updateLang}}
+            as |s|
+          >
+            <s.Option value="user" selected={{eq this.lang "user"}}>
+              {{t "chart.language.user"}}
+            </s.Option>
+            <s.Option value="english" selected={{eq this.lang "english"}}>
+              {{t "chart.language.english"}}
+            </s.Option>
+            <s.Option value="romaji" selected={{eq this.lang "romaji"}}>
+              {{t "chart.language.romaji"}}
+            </s.Option>
+            <s.Option value="native" selected={{eq this.lang "native"}}>
+              {{t "chart.language.native"}}
+            </s.Option>
+          </Select>
+        </div>
+      </div>
+    </div>
     <Button type="button" {{on "click" this.refresh}}>
       <FaIcon @icon="arrows-rotate" @fixedWidth={{true}} />
     </Button>
   </div>
-  <div class="bg-white bg-opacity-5 flex flex-col items-center justify-center flex-grow p-4">
+  <div class="bg-white bg-opacity-5 flex flex-col items-center justify-center flex-grow p-0.5">
     <Loading @loading={{this.loading}}>
       {{#if this.error}}
         <div class="flex flex-col justify-center items-center bg-clip-content">
@@ -27,34 +55,6 @@
           @list={{@model.userData.list}}
           @lang={{this.lang}}
         />
-        <div class="controls grid items-center justify-items-center">
-          <div class="language text-center flex flex-col">
-            <label class="sr-only" for="lang-select">
-              {{t "chart.language.title"}}
-            </label>
-            <div class="inline-block relative w-64">
-              <Select
-                id="lang-select"
-                class="block w-full"
-                {{on "change" this.updateLang}}
-                as |s|
-              >
-                <s.Option value="user" selected={{eq this.lang "user"}}>
-                  {{t "chart.language.user"}}
-                </s.Option>
-                <s.Option value="english" selected={{eq this.lang "english"}}>
-                  {{t "chart.language.english"}}
-                </s.Option>
-                <s.Option value="romaji" selected={{eq this.lang "romaji"}}>
-                  {{t "chart.language.romaji"}}
-                </s.Option>
-                <s.Option value="native" selected={{eq this.lang "native"}}>
-                  {{t "chart.language.native"}}
-                </s.Option>
-              </Select>
-            </div>
-          </div>
-        </div>
       {{/if}}
     </Loading>
   </div>

@@ -17,6 +17,6 @@ const Option = <template>
   <div
     class='pointer-events-none absolute inset-y-0 right-0 flex items-center px-2'
   >
-    <FaIcon class='text-white' @icon='caret-up' @fixedWidth={{true}} />
+    <FaIcon class='text-white' @icon='caret-down' @fixedWidth={{true}} />
   </div>
 </template>

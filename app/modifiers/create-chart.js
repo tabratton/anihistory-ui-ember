@@ -86,8 +86,8 @@ export default class CreateChartAm4Modifier extends Modifier {
     series1.columns.template.tooltipHTML = '';
     series1.columns.template.adapter.add('tooltipHTML', (/*html, context*/) => {
       return `
-              <div class="flex flex-col items-center justify-center w-96">
-                  <h4 class="text-2xl font-bold mb-2">{${lang}}</h4>
+              <div class="flex flex-col items-center justify-center w-64">
+                  <h4 class="text-xl font-bold mb-2 text-center">{${lang}}</h4>
                   <span class="flex justify-between w-full">
                       <span class="font-bold mr-1">${this.intl.t(
                         'chart.started',
@@ -112,7 +112,7 @@ export default class CreateChartAm4Modifier extends Modifier {
                       )}</span>
                       <span>{average}</span>
                   </span>
-                  <span class="mt-2">{description}</span>
+                  <!-- <span class="mt-2">{description}</span> -->
               </div>
              `;
     });

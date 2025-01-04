@@ -3,7 +3,7 @@ module.exports = function () {
     'free-solid-svg-icons': [
       'arrows-rotate',
       'bars',
-      'caret-up',
+      'caret-down',
       'magnifying-glass',
       'xmark',
     ],
