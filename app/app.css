@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* stylelint-disable at-rule-no-deprecated */
 .avatar {
   @apply h-[2.875rem];
 }

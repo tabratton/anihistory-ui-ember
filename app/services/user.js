@@ -2,7 +2,6 @@ import { action } from '@ember/object';
 import Service, { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import { restartableTask, timeout } from 'ember-concurrency';
-import fetch from 'fetch';
 
 export default class UserService extends Service {
   @service router;

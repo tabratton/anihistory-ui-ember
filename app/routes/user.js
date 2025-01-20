@@ -1,7 +1,6 @@
 import { action } from '@ember/object';
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
-import fetch from 'fetch';
 import { DateTime, Interval } from 'luxon';
 
 export default class UserRoute extends Route {
