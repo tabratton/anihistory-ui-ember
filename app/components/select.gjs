@@ -10,7 +10,7 @@ const Option = <template>
 
 <template>
   <select
-    class="select text-white bg-white bg-opacity-5 placeholder-gray-400 placeholder-opacity-65 focus:ring-0 border border-gray-500 focus:border-main-600 rounded-md pl-4 py-2 bg-none"
+    class="select text-white bg-white/5 placeholder:text-gray-400/65 focus:ring-0 border border-gray-500 focus:border-main-600 rounded-md pl-4 py-2 bg-none"
     ...attributes
   >
     {{yield (hash Option=(component Option))}}

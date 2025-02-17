@@ -48,33 +48,8 @@ module.exports = function (defaults) {
         module: {
           rules: [
             {
-              // When webpack sees an import for a CSS file
-              test: /(node_modules\/\.embroider\/rewritten-app\/)(.*\.css)$/i,
-              use: [
-                {
-                  // use the PostCSS loader addon
-                  loader: 'postcss-loader',
-                  options: {
-                    sourceMap: isProduction() === false,
-                    postcssOptions: {
-                      config: './postcss.config.js',
-                    },
-                  },
-                },
-              ],
-            },
-            {
-              test: /(node_modules\/\.embroider\/rewritten-app\/)(.*\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg))$/,
-              use: [
-                {
-                  // include a image/font standard loader for certain
-                  // Tailwind/CSS features.
-                  loader: 'url-loader',
-                  options: {
-                    limit: 8192,
-                  },
-                },
-              ],
+              test: /\.css$/i,
+              use: ['postcss-loader'],
             },
           ],
         },

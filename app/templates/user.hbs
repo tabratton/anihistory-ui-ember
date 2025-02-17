@@ -1,5 +1,5 @@
 <div class="user rounded-md justify-self-stretch flex flex-col p-2 h-full">
-  <div class="bg-white bg-opacity-7 p-4 text-white flex items-center justify-between">
+  <div class="bg-white/7 p-4 text-white flex items-center justify-between">
     <h4 class="text-2xl font-bold">
       {{t "chart.title"}}
     </h4>
@@ -35,7 +35,7 @@
       <TemplateIcon @icon="arrows-rotate" @fixedWidth={{true}} />
     </Button>
   </div>
-  <div class="bg-white bg-opacity-5 flex flex-col items-center justify-center flex-grow p-0.5">
+  <div class="bg-white/5 flex flex-col items-center justify-center flex-grow p-0.5">
     <Loading @loading={{this.loading}}>
       {{#if this.error}}
         <div class="flex flex-col justify-center items-center bg-clip-content">

@@ -45,10 +45,10 @@
           </span>
           {{user.name}}
         </PowerSelect>
-        <TemplateIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
+        <TemplateIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400/65" @icon="magnifying-glass" @fixedWidth={{true}} />
       </div>
     </section>
-    <div class="md:hidden text-white text-opacity-80">
+    <div class="md:hidden text-white/80">
       <Button {{on "click" (fn (mut this.mobileMenuOpen) true)}}>
         <TemplateIcon @icon="bars" @fixedWidth={{true}} />
       </Button>
@@ -103,7 +103,7 @@
                 </span>
                 {{user.name}}
               </PowerSelect>
-              <TemplateIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
+              <TemplateIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400/65" @icon="magnifying-glass" @fixedWidth={{true}} />
             </div>
           </section>
         </div>
