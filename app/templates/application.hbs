@@ -45,12 +45,12 @@
           </span>
           {{user.name}}
         </PowerSelect>
-        <FaIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
+        <TemplateIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
       </div>
     </section>
     <div class="md:hidden text-white text-opacity-80">
       <Button {{on "click" (fn (mut this.mobileMenuOpen) true)}}>
-        <FaIcon @icon="bars" @fixedWidth={{true}} />
+        <TemplateIcon @icon="bars" @fixedWidth={{true}} />
       </Button>
       {{#if this.mobileMenuOpen}}
         <div class="absolute top-0 right-0 w-[85%] h-full bg-gray-900 z-10">
@@ -73,7 +73,7 @@
               </div>
             {{/if}}
             <Button class="self-start" {{on "click" (fn (mut this.mobileMenuOpen) false)}}>
-              <FaIcon @icon="xmark" @fixedWidth={{true}} />
+              <TemplateIcon @icon="xmark" @fixedWidth={{true}} />
             </Button>
           </div>
           <section class="flex flex-nowrap items-center w-full p-4">
@@ -103,7 +103,7 @@
                 </span>
                 {{user.name}}
               </PowerSelect>
-              <FaIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
+              <TemplateIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400 text-opacity-65" @icon="magnifying-glass" @fixedWidth={{true}} />
             </div>
           </section>
         </div>
