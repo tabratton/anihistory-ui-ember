@@ -154,8 +154,8 @@ importers:
         specifier: ^4.2.0
         version: 4.2.0(@babel/core@7.26.9)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0))
       ember-page-title:
-        specifier: ^8.2.3
-        version: 8.2.3(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0))
+        specifier: ^9.0.1
+        version: 9.0.1(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0))
       ember-power-select:
         specifier: ^8.7.0
         version: 8.7.0(@babel/core@7.26.9)(@ember/test-helpers@5.1.0(@babel/core@7.26.9)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)))(@glimmer/component@2.0.0)(@glimmer/tracking@1.1.2)(ember-basic-dropdown@8.5.0(@babel/core@7.26.9)(@ember/string@4.0.0)(@ember/test-helpers@5.1.0(@babel/core@7.26.9)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)))(@glimmer/component@2.0.0)(@glimmer/tracking@1.1.2)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)))(ember-concurrency@4.0.2(@babel/core@7.26.9)(@glimmer/tracking@1.1.2)(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)))(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0))
@@ -1303,6 +1303,10 @@ packages:
     resolution: {integrity: sha512-zi0CENFD1e0DH7c9M/rNKJnFnt2c3+736J3lguBddZdmaIV6Cb8l3HQSkskSW5O4ady+SavemLKO3hCjQQJBIw==}
     engines: {node: 12.* || 14.* || >= 16}
 
+  '@embroider/shared-internals@2.9.0':
+    resolution: {integrity: sha512-8untWEvGy6av/oYibqZWMz/yB+LHsKxEOoUZiLvcpFwWj2Sipc0DcXeTJQZQZ++otNkLCWyDrDhOLrOkgjOPSg==}
+    engines: {node: 12.* || 14.* || >= 16}
+
   '@embroider/util@1.13.2':
     resolution: {integrity: sha512-6/0sK4dtFK7Ld+t5Ovn9EilBVySoysMRdDAf/jGteOO7jdLKNgHnONg0w1T7ZZaMFUQfwJdRrk3u0dM+Idhiew==}
     engines: {node: 12.* || 14.* || >= 16}
@@ -2334,6 +2338,10 @@ packages:
 
   babel-import-util@2.0.1:
     resolution: {integrity: sha512-N1ZfNprtf/37x0R05J0QCW/9pCAcuI+bjZIK9tlu0JEkwEST7ssdD++gxHRbD58AiG5QE5OuNYhRoEFsc1wESw==}
+    engines: {node: '>= 12.*'}
+
+  babel-import-util@2.1.1:
+    resolution: {integrity: sha512-3qBQWRjzP9NreSH/YrOEU1Lj5F60+pWSLP0kIdCWxjFHH7pX2YPHIxQ67el4gnMNfYoDxSDGcT0zpVlZ+gVtQA==}
     engines: {node: '>= 12.*'}
 
   babel-import-util@3.0.0:
@@ -3810,11 +3818,11 @@ packages:
       ember-source:
         optional: true
 
-  ember-page-title@8.2.3:
-    resolution: {integrity: sha512-9XH4EVPCpSCyXRsLPzdDydU4HgQnaVeJJTrRF0WVh5bZERI9DgxuHv1NPmZU28todHRH91KcBc5nx8kIVJmqUw==}
+  ember-page-title@9.0.1:
+    resolution: {integrity: sha512-qo3NHJRrCZpYyGr+KkDAQDZ9IFJOFLW9qEKYer2tetSpaL9B2PQmh4KY0XdZY25jxFg8GZ1+DChDSImIbh5yzA==}
     engines: {node: 16.* || >= 18}
     peerDependencies:
-      ember-source: '>= 3.28.0'
+      ember-source: '>= 4.2.0'
 
   ember-power-select@8.7.0:
     resolution: {integrity: sha512-9T9M5QqgmAYORxxwiz4A9Hm8cZPWFsliIM8X2UVnQpO8Zd+oU/grIIF5MFkv2xTa9HGWCEvwnVRRUSPqFRBW7Q==}
@@ -6093,6 +6101,9 @@ packages:
   pkg-entry-points@1.1.0:
     resolution: {integrity: sha512-9vL2T/he5Kb97GVY+V3Ih4jCC1lF3PQGIDUJIUqKM4Q6twmhrUSAa0OFj+kb8IEs4wYzEgB6kcc4oYy21kZnQw==}
 
+  pkg-entry-points@1.1.1:
+    resolution: {integrity: sha512-BhZa7iaPmB4b3vKIACoppyUoYn8/sFs17VJJtzrzPZvEnN2nqrgg911tdL65lA2m1ml6UI3iPeYbZQ4VXpn1mA==}
+
   pkg-up@2.0.0:
     resolution: {integrity: sha512-fjAPuiws93rm7mPUu21RdBnkeZNrbfCFCwfAhPWY+rR3zG0ubpe5cEReHOw5fIbfmsxEV/g2kSxGTATY3Bpnwg==}
     engines: {node: '>=4'}
@@ -6773,6 +6784,11 @@ packages:
 
   semver@7.6.3:
     resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  semver@7.7.1:
+    resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -9435,10 +9451,10 @@ snapshots:
 
   '@embroider/addon-shim@1.9.0':
     dependencies:
-      '@embroider/shared-internals': 2.8.1(supports-color@8.1.1)
+      '@embroider/shared-internals': 2.9.0
       broccoli-funnel: 3.0.8
       common-ancestor-path: 1.0.1
-      semver: 7.6.3
+      semver: 7.7.1
     transitivePeerDependencies:
       - supports-color
 
@@ -9597,6 +9613,23 @@ snapshots:
       pkg-entry-points: 1.1.0
       resolve-package-path: 4.0.3
       semver: 7.6.3
+      typescript-memoize: 1.1.1
+    transitivePeerDependencies:
+      - supports-color
+
+  '@embroider/shared-internals@2.9.0':
+    dependencies:
+      babel-import-util: 2.1.1
+      debug: 4.4.0(supports-color@8.1.1)
+      ember-rfc176-data: 0.3.18
+      fs-extra: 9.1.0
+      is-subdir: 1.2.0
+      js-string-escape: 1.0.1
+      lodash: 4.17.21
+      minimatch: 3.1.2
+      pkg-entry-points: 1.1.1
+      resolve-package-path: 4.0.3
+      semver: 7.7.1
       typescript-memoize: 1.1.1
     transitivePeerDependencies:
       - supports-color
@@ -10927,6 +10960,8 @@ snapshots:
   babel-import-util@0.2.0: {}
 
   babel-import-util@2.0.1: {}
+
+  babel-import-util@2.1.1: {}
 
   babel-import-util@3.0.0: {}
 
@@ -12638,7 +12673,7 @@ snapshots:
       hash-for-dep: 1.5.1
       heimdalljs-logger: 0.1.10
       json-stable-stringify: 1.2.1
-      semver: 7.6.3
+      semver: 7.7.1
       silent-error: 1.1.1
       strip-bom: 4.0.0
       walk-sync: 2.2.0
@@ -12733,7 +12768,7 @@ snapshots:
       fs-extra: 9.1.0
       resolve: 1.22.8
       rsvp: 4.8.5
-      semver: 7.6.3
+      semver: 7.7.1
       stagehand: 1.0.1
       walk-sync: 2.2.0
     transitivePeerDependencies:
@@ -13031,9 +13066,9 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-page-title@8.2.3(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)):
+  ember-page-title@9.0.1(ember-source@6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)):
     dependencies:
-      '@embroider/addon-shim': 1.8.7
+      '@embroider/addon-shim': 1.9.0
       '@simple-dom/document': 1.4.0
       ember-source: 6.2.0(@glimmer/component@2.0.0)(rsvp@4.8.5)(webpack@5.98.0)
     transitivePeerDependencies:
@@ -15658,6 +15693,8 @@ snapshots:
 
   pkg-entry-points@1.1.0: {}
 
+  pkg-entry-points@1.1.1: {}
+
   pkg-up@2.0.0:
     dependencies:
       find-up: 2.1.0
@@ -16350,6 +16387,8 @@ snapshots:
       lru-cache: 6.0.0
 
   semver@7.6.3: {}
+
+  semver@7.7.1: {}
 
   send@0.19.0:
     dependencies:
@@ -17354,7 +17393,7 @@ snapshots:
   validate-peer-dependencies@1.2.0:
     dependencies:
       resolve-package-path: 3.1.0
-      semver: 7.6.3
+      semver: 7.7.1
 
   vary@1.1.2: {}
 
