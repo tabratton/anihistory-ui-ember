@@ -78,7 +78,7 @@
     @apply border-b;
   }
 
-  &[aria-current=true] {
+  &[aria-current="true"] {
     @apply bg-main-700;
   }
 }
