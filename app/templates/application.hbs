@@ -1,7 +1,9 @@
 {{page-title "AniHistory"}}
 
 <div class="relative bg-[inherit] w-full h-full">
-  <nav class="max-h-[3.875rem] sticky top-0 bg-gray-800 shadow-lg p-2 flex items-center justify-between">
+  <nav
+    class="max-h-[3.875rem] sticky top-0 bg-gray-800 shadow-lg p-2 flex items-center justify-between"
+  >
     <LinkTo
       class="font-mono italic text-white text-lg"
       @route="application"
@@ -15,7 +17,7 @@
           class="avatar rounded"
           src={{this.user.selectedUser.avatar.large}}
           alt={{this.user.selectedUser.name}}
-        >
+        />
         <a
           class="text-main-500 ml-2"
           href={{this.user.url}}
@@ -41,11 +43,15 @@
               class="avatar-small rounded-lg"
               src={{user.avatar.medium}}
               alt=""
-            >
+            />
           </span>
           {{user.name}}
         </PowerSelect>
-        <TemplateIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400/65" @icon="magnifying-glass" @fixedWidth={{true}} />
+        <TemplateIcon
+          class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400/65"
+          @icon="magnifying-glass"
+          @fixedWidth={{true}}
+        />
       </div>
     </section>
     <div class="md:hidden text-white/80">
@@ -61,7 +67,7 @@
                   class="avatar rounded"
                   src={{this.user.selectedUser.avatar.large}}
                   alt={{this.user.selectedUser.name}}
-                >
+                />
                 <a
                   class="text-main-500 ml-2"
                   href={{this.user.url}}
@@ -72,16 +78,16 @@
                 </a>
               </div>
             {{/if}}
-            <Button class="self-start" {{on "click" (fn (mut this.mobileMenuOpen) false)}}>
+            <Button
+              class="self-start"
+              {{on "click" (fn (mut this.mobileMenuOpen) false)}}
+            >
               <TemplateIcon @icon="xmark" @fixedWidth={{true}} />
             </Button>
           </div>
           <section class="flex flex-nowrap items-center w-full p-4">
             <div class="relative flex-grow">
-              <label
-                class="sr-only"
-                for="user-search-2"
-              >
+              <label class="sr-only" for="user-search-2">
                 {{t "navigation-bar.username"}}
               </label>
               <PowerSelect
@@ -99,11 +105,15 @@
                     class="avatar-small rounded-lg"
                     src={{user.avatar.medium}}
                     alt=""
-                  >
+                  />
                 </span>
                 {{user.name}}
               </PowerSelect>
-              <TemplateIcon class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400/65" @icon="magnifying-glass" @fixedWidth={{true}} />
+              <TemplateIcon
+                class="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400/65"
+                @icon="magnifying-glass"
+                @fixedWidth={{true}}
+              />
             </div>
           </section>
         </div>
