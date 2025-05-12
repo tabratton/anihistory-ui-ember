@@ -5,6 +5,3 @@
 /dist/
 /tmp/
 /public/
-
-# addons
-/.node_modules.ember-try/
