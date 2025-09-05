@@ -46,8 +46,8 @@ importers:
         specifier: ^9.33.0
         version: 9.33.0
       '@fortawesome/ember-fontawesome':
-        specifier: ^3.0.1
-        version: 3.0.1(@fortawesome/fontawesome-svg-core@6.7.2)(@glimmer/component@2.0.0)
+        specifier: ^3.1.0
+        version: 3.1.0(@fortawesome/fontawesome-svg-core@6.7.2)(@glimmer/component@2.0.0)
       '@fortawesome/fontawesome-svg-core':
         specifier: ^6.7.2
         version: 6.7.2
@@ -2232,10 +2232,10 @@ packages:
       typescript:
         optional: true
 
-  '@fortawesome/ember-fontawesome@3.0.1':
-    resolution: {integrity: sha512-TaCrlNjide9HMrZqpzX6A0KFF4FIoi0YpDZw/WhC9Usv8znmMrOQxswhiJAGn8aVuKup7BtNwK18C9Bw3tQHBA==}
+  '@fortawesome/ember-fontawesome@3.1.0':
+    resolution: {integrity: sha512-7kkPZo1no5VWamR3Ms2I4m2htZpUXcA76yC2gc0jviOEQit+urrCPIIWk1XdAudKO2Z8x5RR4l1mmJe110Zd7A==}
     peerDependencies:
-      '@fortawesome/fontawesome-svg-core': ^6.6.0
+      '@fortawesome/fontawesome-svg-core': ^6.6.0 || ^7.0.0
       '@glimmer/component': '>= 1.1.2'
 
   '@fortawesome/fontawesome-common-types@6.7.2':
@@ -12000,12 +12000,14 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.3
 
-  '@fortawesome/ember-fontawesome@3.0.1(@fortawesome/fontawesome-svg-core@6.7.2)(@glimmer/component@2.0.0)':
+  '@fortawesome/ember-fontawesome@3.1.0(@fortawesome/fontawesome-svg-core@6.7.2)(@glimmer/component@2.0.0)':
     dependencies:
-      '@embroider/addon-shim': 1.9.0
+      '@embroider/addon-shim': 1.10.0
+      '@embroider/macros': 1.18.1
       '@fortawesome/fontawesome-svg-core': 6.7.2
       '@glimmer/component': 2.0.0
     transitivePeerDependencies:
+      - '@glint/template'
       - supports-color
 
   '@fortawesome/fontawesome-common-types@6.7.2': {}
