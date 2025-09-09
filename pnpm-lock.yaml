@@ -47,10 +47,10 @@ importers:
         version: 9.35.0
       '@fortawesome/ember-fontawesome':
         specifier: ^3.1.0
-        version: 3.1.0(@fortawesome/fontawesome-svg-core@6.7.2)(@glimmer/component@2.0.0)
+        version: 3.1.0(@fortawesome/fontawesome-svg-core@7.0.1)(@glimmer/component@2.0.0)
       '@fortawesome/fontawesome-svg-core':
-        specifier: ^6.7.2
-        version: 6.7.2
+        specifier: ^7.0.1
+        version: 7.0.1
       '@fortawesome/free-solid-svg-icons':
         specifier: ^7.0.1
         version: 7.0.1
@@ -2256,16 +2256,12 @@ packages:
       '@fortawesome/fontawesome-svg-core': ^6.6.0 || ^7.0.0
       '@glimmer/component': '>= 1.1.2'
 
-  '@fortawesome/fontawesome-common-types@6.7.2':
-    resolution: {integrity: sha512-Zs+YeHUC5fkt7Mg1l6XTniei3k4bwG/yo3iFUtZWd/pMx9g3fdvkSK9E0FOC+++phXOka78uJcYb8JaFkW52Xg==}
-    engines: {node: '>=6'}
-
   '@fortawesome/fontawesome-common-types@7.0.1':
     resolution: {integrity: sha512-0VpNtO5cNe1/HQWMkl4OdncYK/mv9hnBte0Ew0n6DMzmo3Q3WzDFABHm6LeNTipt5zAyhQ6Ugjiu8aLaEjh1gg==}
     engines: {node: '>=6'}
 
-  '@fortawesome/fontawesome-svg-core@6.7.2':
-    resolution: {integrity: sha512-yxtOBWDrdi5DD5o1pmVdq3WMCvnobT0LU6R8RyyVXPvFRd2o79/0NCuQoCjNTeZz9EzA9xS3JxNWfv54RIHFEA==}
+  '@fortawesome/fontawesome-svg-core@7.0.1':
+    resolution: {integrity: sha512-x0cR55ILVqFpUioSMf6ebpRCMXMcheGN743P05W2RB5uCNpJUqWIqW66Lap8PfL/lngvjTbZj0BNSUweIr/fHQ==}
     engines: {node: '>=6'}
 
   '@fortawesome/free-solid-svg-icons@7.0.1':
@@ -12006,23 +12002,21 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.3
 
-  '@fortawesome/ember-fontawesome@3.1.0(@fortawesome/fontawesome-svg-core@6.7.2)(@glimmer/component@2.0.0)':
+  '@fortawesome/ember-fontawesome@3.1.0(@fortawesome/fontawesome-svg-core@7.0.1)(@glimmer/component@2.0.0)':
     dependencies:
       '@embroider/addon-shim': 1.10.0
       '@embroider/macros': 1.18.1
-      '@fortawesome/fontawesome-svg-core': 6.7.2
+      '@fortawesome/fontawesome-svg-core': 7.0.1
       '@glimmer/component': 2.0.0
     transitivePeerDependencies:
       - '@glint/template'
       - supports-color
 
-  '@fortawesome/fontawesome-common-types@6.7.2': {}
-
   '@fortawesome/fontawesome-common-types@7.0.1': {}
 
-  '@fortawesome/fontawesome-svg-core@6.7.2':
+  '@fortawesome/fontawesome-svg-core@7.0.1':
     dependencies:
-      '@fortawesome/fontawesome-common-types': 6.7.2
+      '@fortawesome/fontawesome-common-types': 7.0.1
 
   '@fortawesome/free-solid-svg-icons@7.0.1':
     dependencies:
