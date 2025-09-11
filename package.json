@@ -110,6 +110,6 @@
   },
   "dependencies": {
     "@amcharts/amcharts4": "^4.10.40",
-    "luxon": "^3.7.1"
+    "luxon": "^3.7.2"
   }
 }
