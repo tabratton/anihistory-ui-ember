@@ -62,7 +62,7 @@ importers:
         version: 1.1.2
       '@tailwindcss/forms':
         specifier: ^0.5.10
-        version: 0.5.10(tailwindcss@4.1.13)
+        version: 0.5.10(tailwindcss@4.1.14)
       '@tailwindcss/postcss':
         specifier: ^4.1.13
         version: 4.1.13
@@ -224,10 +224,10 @@ importers:
         version: 39.0.0(stylelint@16.24.0(typescript@5.8.3))
       stylelint-config-tailwindcss:
         specifier: ^1.0.0
-        version: 1.0.0(stylelint@16.24.0(typescript@5.8.3))(tailwindcss@4.1.13)
+        version: 1.0.0(stylelint@16.24.0(typescript@5.8.3))(tailwindcss@4.1.14)
       tailwindcss:
-        specifier: ^4.1.13
-        version: 4.1.13
+        specifier: ^4.1.14
+        version: 4.1.14
       tracked-built-ins:
         specifier: ^4.0.0
         version: 4.0.0(@babel/core@7.28.4)
@@ -8019,6 +8019,9 @@ packages:
   tailwindcss@4.1.13:
     resolution: {integrity: sha512-i+zidfmTqtwquj4hMEwdjshYYgMbOrPzb9a0M3ZgNa0JMoZeFC6bxZvO8yr8ozS6ix2SDz0+mvryPeBs2TFE+w==}
 
+  tailwindcss@4.1.14:
+    resolution: {integrity: sha512-b7pCxjGO98LnxVkKjaZSDeNuljC4ueKUddjENJOADtubtdo8llTaJy7HwBMeLNSSo2N5QIAgklslK1+Ir8r6CA==}
+
   tap-parser@7.0.0:
     resolution: {integrity: sha512-05G8/LrzqOOFvZhhAk32wsGiPZ1lfUrl+iV7+OkKgfofZxiceZWMHkKmow71YsyVQ8IvGBP2EjcIjE5gL4l5lA==}
     hasBin: true
@@ -12806,10 +12809,10 @@ snapshots:
 
   '@socket.io/component-emitter@3.1.2': {}
 
-  '@tailwindcss/forms@0.5.10(tailwindcss@4.1.13)':
+  '@tailwindcss/forms@0.5.10(tailwindcss@4.1.14)':
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 4.1.13
+      tailwindcss: 4.1.14
 
   '@tailwindcss/node@4.1.13':
     dependencies:
@@ -18986,10 +18989,10 @@ snapshots:
       stylelint: 16.24.0(typescript@5.8.3)
       stylelint-config-recommended: 17.0.0(stylelint@16.24.0(typescript@5.8.3))
 
-  stylelint-config-tailwindcss@1.0.0(stylelint@16.24.0(typescript@5.8.3))(tailwindcss@4.1.13):
+  stylelint-config-tailwindcss@1.0.0(stylelint@16.24.0(typescript@5.8.3))(tailwindcss@4.1.14):
     dependencies:
       stylelint: 16.24.0(typescript@5.8.3)
-      tailwindcss: 4.1.13
+      tailwindcss: 4.1.14
 
   stylelint@16.24.0(typescript@5.8.3):
     dependencies:
@@ -19101,6 +19104,8 @@ snapshots:
       strip-ansi: 6.0.1
 
   tailwindcss@4.1.13: {}
+
+  tailwindcss@4.1.14: {}
 
   tap-parser@7.0.0:
     dependencies:
