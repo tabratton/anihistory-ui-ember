@@ -28,7 +28,7 @@ const esmParserOptions = {
   requireConfigFile: false,
   babelOptions: {
     plugins: [
-      ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
+      // ['@babel/plugin-proposal-decorators', { decoratorsBeforeExport: true }],
     ],
   },
 };
