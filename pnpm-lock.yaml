@@ -71,7 +71,7 @@ importers:
         version: 6.1.0(@babel/core@7.28.4)(rollup@4.52.4)
       '@tailwindcss/forms':
         specifier: ^0.5.10
-        version: 0.5.10(tailwindcss@4.1.14)
+        version: 0.5.10(tailwindcss@4.1.15)
       '@tailwindcss/vite':
         specifier: ^4.1.15
         version: 4.1.15(vite@6.4.0(@types/node@24.9.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0))
@@ -212,10 +212,10 @@ importers:
         version: 39.0.1(stylelint@16.25.0(typescript@5.8.3))
       stylelint-config-tailwindcss:
         specifier: ^1.0.0
-        version: 1.0.0(stylelint@16.25.0(typescript@5.8.3))(tailwindcss@4.1.14)
+        version: 1.0.0(stylelint@16.25.0(typescript@5.8.3))(tailwindcss@4.1.15)
       tailwindcss:
-        specifier: ^4.1.14
-        version: 4.1.14
+        specifier: ^4.1.15
+        version: 4.1.15
       tracked-built-ins:
         specifier: ^4.0.0
         version: 4.0.0(@babel/core@7.28.4)
@@ -7719,9 +7719,6 @@ packages:
     resolution: {integrity: sha512-9kY+CygyYM6j02t5YFHbNz2FN5QmYGv9zAjVp4lCDjlCw7amdckXlEt/bjMhUIfj4ThGRE4gCUH5+yGnNuPo5A==}
     engines: {node: '>=10.0.0'}
 
-  tailwindcss@4.1.14:
-    resolution: {integrity: sha512-b7pCxjGO98LnxVkKjaZSDeNuljC4ueKUddjENJOADtubtdo8llTaJy7HwBMeLNSSo2N5QIAgklslK1+Ir8r6CA==}
-
   tailwindcss@4.1.15:
     resolution: {integrity: sha512-k2WLnWkYFkdpRv+Oby3EBXIyQC8/s1HOFMBUViwtAh6Z5uAozeUSMQlIsn/c6Q2iJzqG6aJT3wdPaRNj70iYxQ==}
 
@@ -12141,10 +12138,10 @@ snapshots:
 
   '@socket.io/component-emitter@3.1.2': {}
 
-  '@tailwindcss/forms@0.5.10(tailwindcss@4.1.14)':
+  '@tailwindcss/forms@0.5.10(tailwindcss@4.1.15)':
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 4.1.14
+      tailwindcss: 4.1.15
 
   '@tailwindcss/node@4.1.15':
     dependencies:
@@ -18150,10 +18147,10 @@ snapshots:
       stylelint: 16.25.0(typescript@5.8.3)
       stylelint-config-recommended: 17.0.0(stylelint@16.25.0(typescript@5.8.3))
 
-  stylelint-config-tailwindcss@1.0.0(stylelint@16.25.0(typescript@5.8.3))(tailwindcss@4.1.14):
+  stylelint-config-tailwindcss@1.0.0(stylelint@16.25.0(typescript@5.8.3))(tailwindcss@4.1.15):
     dependencies:
       stylelint: 16.25.0(typescript@5.8.3)
-      tailwindcss: 4.1.14
+      tailwindcss: 4.1.15
 
   stylelint@16.25.0(typescript@5.8.3):
     dependencies:
@@ -18263,8 +18260,6 @@ snapshots:
       slice-ansi: 4.0.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
-
-  tailwindcss@4.1.14: {}
 
   tailwindcss@4.1.15: {}
 
