@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "vite build",
-    "deploy": "ember deploy production",
+    "deploy": "ember deploy production --verbose",
     "format": "prettier . --cache --write",
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\" --prefixColors auto",
     "lint:css": "stylelint \"**/*.css\"",
