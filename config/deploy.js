@@ -12,6 +12,9 @@ module.exports = function (deployTarget) {
     'revision-data': {
       type: 'version-commit',
     },
+    'smart-compress': {
+      zopfli: true,
+    },
     s3: {},
     's3-index': {},
   };
