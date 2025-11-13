@@ -37,7 +37,7 @@
     "@embroider/compat": "^4.1.10",
     "@embroider/config-meta-loader": "^1.0.0",
     "@embroider/core": "^4.2.7",
-    "@embroider/macros": "^1.19.2",
+    "@embroider/macros": "^1.19.4",
     "@embroider/vite": "^1.4.1",
     "@eslint/js": "^9.39.1",
     "@fortawesome/ember-fontawesome": "^3.1.0",
