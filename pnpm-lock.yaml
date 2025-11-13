@@ -43,8 +43,8 @@ importers:
         specifier: ^4.2.7
         version: 4.2.7
       '@embroider/macros':
-        specifier: ^1.19.2
-        version: 1.19.2
+        specifier: ^1.19.4
+        version: 1.19.4
       '@embroider/vite':
         specifier: ^1.4.1
         version: 1.4.1(@embroider/core@4.2.7)(rollup@4.52.4)(vite@6.4.0(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1))
@@ -1471,6 +1471,12 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
+  '@babel/plugin-transform-typescript@7.28.5':
+    resolution: {integrity: sha512-x2Qa+v/CuEoX7Dr31iAfr0IhInrVOWZU/2vJMJ00FOR/2nM0BcBEclpaf9sWCDc+v5e9dMrhSH8/atq/kX7+bA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+
   '@babel/plugin-transform-unicode-escapes@7.23.3':
     resolution: {integrity: sha512-OMCUx/bU6ChE3r4+ZdylEqAjaQgHAgipgW8nsCfu5pGqDcFytVd91AwRvUJSBZDz0exPGgnjoqhgRYLRjFZc9Q==}
     engines: {node: '>=6.9.0'}
@@ -1687,15 +1693,6 @@ packages:
   '@embroider/core@4.2.7':
     resolution: {integrity: sha512-ZHAyMGzNbIt2XthY6KUIQT15YiBYrZgWqCgOpioRPQS+HpMPkKETHkDWjftOJh9RpQL7hfLMvucnvxeCVXXPbw==}
     engines: {node: 12.* || 14.* || >= 16}
-
-  '@embroider/macros@1.19.2':
-    resolution: {integrity: sha512-lCG8Y58ZGz9kFvvEJjs3c8VDKDtLYV6iszEuQDyBgOtf1F+zizuZJFchLHSP4Vw5ND3Q4iF5I7tFQLGh0wODDg==}
-    engines: {node: 12.* || 14.* || >= 16}
-    peerDependencies:
-      '@glint/template': ^1.0.0
-    peerDependenciesMeta:
-      '@glint/template':
-        optional: true
 
   '@embroider/macros@1.19.4':
     resolution: {integrity: sha512-x4wrnkE6fPN6mOyJeJv2I+lpKE2pHPq25S8bCiRJJb3H3RyiTm2LjSeB4AOVTi8YUjiWToI4PBgZOtx44hM4LA==}
@@ -10376,6 +10373,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@babel/plugin-transform-typescript@7.28.5(@babel/core@7.28.5)':
+    dependencies:
+      '@babel/core': 7.28.5
+      '@babel/helper-annotate-as-pure': 7.27.3
+      '@babel/helper-create-class-features-plugin': 7.28.5(@babel/core@7.28.5)
+      '@babel/helper-plugin-utils': 7.27.1
+      '@babel/helper-skip-transparent-expression-wrappers': 7.27.1
+      '@babel/plugin-syntax-typescript': 7.27.1(@babel/core@7.28.5)
+    transitivePeerDependencies:
+      - supports-color
+
   '@babel/plugin-transform-unicode-escapes@7.23.3(@babel/core@7.28.5)':
     dependencies:
       '@babel/core': 7.28.5
@@ -10755,7 +10763,7 @@ snapshots:
     dependencies:
       '@ember/test-waiters': 4.1.1
       '@embroider/addon-shim': 1.10.0
-      '@embroider/macros': 1.19.2
+      '@embroider/macros': 1.19.4
       '@simple-dom/interface': 1.4.0
       decorator-transforms: 2.3.0(@babel/core@7.28.5)
       dom-element-descriptors: 0.5.1
@@ -10767,7 +10775,7 @@ snapshots:
   '@ember/test-waiters@4.1.1':
     dependencies:
       '@embroider/addon-shim': 1.10.0
-      '@embroider/macros': 1.19.2
+      '@embroider/macros': 1.19.4
     transitivePeerDependencies:
       - '@glint/template'
       - supports-color
@@ -10880,19 +10888,6 @@ snapshots:
       - canvas
       - supports-color
       - utf-8-validate
-
-  '@embroider/macros@1.19.2':
-    dependencies:
-      '@embroider/shared-internals': 3.0.1
-      assert-never: 1.4.0
-      babel-import-util: 3.0.1
-      ember-cli-babel: 7.26.11
-      find-up: 5.0.0
-      lodash: 4.17.21
-      resolve: 1.22.10
-      semver: 7.7.3
-    transitivePeerDependencies:
-      - supports-color
 
   '@embroider/macros@1.19.4':
     dependencies:
@@ -11175,7 +11170,7 @@ snapshots:
   '@fortawesome/ember-fontawesome@3.1.0(@fortawesome/fontawesome-svg-core@7.1.0)(@glimmer/component@2.0.0)':
     dependencies:
       '@embroider/addon-shim': 1.10.0
-      '@embroider/macros': 1.19.2
+      '@embroider/macros': 1.19.4
       '@fortawesome/fontawesome-svg-core': 7.1.0
       '@glimmer/component': 2.0.0
     transitivePeerDependencies:
@@ -12703,7 +12698,7 @@ snapshots:
       glob: 7.2.3
       pkg-up: 2.0.0
       reselect: 3.0.1
-      resolve: 1.22.10
+      resolve: 1.22.11
 
   babel-plugin-module-resolver@5.0.0:
     dependencies:
@@ -13835,7 +13830,7 @@ snapshots:
       '@babel/plugin-proposal-private-methods': 7.18.6(@babel/core@7.28.5)
       '@babel/plugin-transform-class-static-block': 7.28.3(@babel/core@7.28.5)
       '@babel/preset-env': 7.28.5(@babel/core@7.28.5)
-      '@embroider/macros': 1.19.2
+      '@embroider/macros': 1.19.4
       '@embroider/shared-internals': 2.9.1
       babel-loader: 8.4.1(@babel/core@7.28.5)(webpack@5.102.1)
       babel-plugin-ember-modules-api-polyfill: 3.5.0
@@ -13874,7 +13869,7 @@ snapshots:
     dependencies:
       '@ember/test-helpers': 5.4.0(@babel/core@7.28.5)
       '@embroider/addon-shim': 1.10.0
-      '@embroider/macros': 1.19.2
+      '@embroider/macros': 1.19.4
       '@embroider/util': 1.13.4(ember-source@6.8.1(@glimmer/component@2.0.0)(rsvp@4.8.5))
       '@glimmer/component': 2.0.0
       decorator-transforms: 2.3.0(@babel/core@7.28.5)
@@ -13902,7 +13897,7 @@ snapshots:
       '@babel/plugin-proposal-private-property-in-object': 7.21.11(@babel/core@7.28.5)
       '@babel/plugin-transform-modules-amd': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-runtime': 7.28.5(@babel/core@7.28.5)
-      '@babel/plugin-transform-typescript': 7.28.0(@babel/core@7.28.5)
+      '@babel/plugin-transform-typescript': 7.28.5(@babel/core@7.28.5)
       '@babel/polyfill': 7.12.1
       '@babel/preset-env': 7.28.5(@babel/core@7.28.5)
       '@babel/runtime': 7.12.18
@@ -14424,7 +14419,7 @@ snapshots:
     dependencies:
       '@ember/test-helpers': 5.4.0(@babel/core@7.28.5)
       '@embroider/addon-shim': 1.10.0
-      '@embroider/macros': 1.19.2
+      '@embroider/macros': 1.19.4
       qunit: 2.24.2
       qunit-theme-ember: 1.0.0
     transitivePeerDependencies:
@@ -14771,7 +14766,7 @@ snapshots:
   eslint-compat-utils@0.5.1(eslint@9.39.1(jiti@2.6.1)):
     dependencies:
       eslint: 9.39.1(jiti@2.6.1)
-      semver: 7.7.2
+      semver: 7.7.3
 
   eslint-config-prettier@10.1.8(eslint@9.39.1(jiti@2.6.1)):
     dependencies:
@@ -17380,7 +17375,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-syntax-decorators': 7.27.1(@babel/core@7.28.5)
-      '@babel/plugin-transform-typescript': 7.28.0(@babel/core@7.28.5)
+      '@babel/plugin-transform-typescript': 7.28.5(@babel/core@7.28.5)
       prettier: 2.8.8
     transitivePeerDependencies:
       - supports-color
@@ -17418,7 +17413,7 @@ snapshots:
   resolve-package-path@2.0.0:
     dependencies:
       path-root: 0.1.1
-      resolve: 1.22.10
+      resolve: 1.22.11
 
   resolve-package-path@3.1.0:
     dependencies:
