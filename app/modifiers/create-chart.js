@@ -17,7 +17,7 @@ import {
 import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import theme from '@amcharts/amcharts4/themes/spiritedaway';
 import { registerDestructor } from '@ember/destroyable';
-import { inject as service } from '@ember/service';
+import { service } from '@ember/service';
 import Modifier from 'ember-modifier';
 
 options.autoSetClassName = true;

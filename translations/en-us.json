@@ -1,0 +1,33 @@
+{
+  "project_name": "AniHistory",
+  "subtitle": "AniHistory reads your anime list from your <a class=\"text-main-500\" href=\"https://anilist.co\" target=\"_blank\">AniList</a> profile and creates a timeline to visualize your watch history.",
+  "navigation-bar": {
+    "username": "Search Username"
+  },
+  "chart": {
+    "title": "History Timeline",
+    "score": "Score",
+    "started": "Started",
+    "finished": "Finished",
+    "average": "Average",
+    "language": {
+      "title": "Language Select",
+      "user": "User Title",
+      "english": "English",
+      "romaji": "Romaji",
+      "native": "Native"
+    }
+  },
+  "messages": {
+    "anilist_instructions": "Click here to go to your list on anilist",
+    "invalid_date": "{name} (Start: {start}, End: {end})",
+    "date_range": "Invalid date range(s):",
+    "unavail": "Service Unavailable",
+    "not_found": "User not found on AniList",
+    "loading_disclaimer": "It'll take a few seconds to load all your data, depending on how large your list is",
+    "user_loading": "User Loading",
+    "refresh_directions": "Press Refresh to refresh the page",
+    "refresh": "Refresh",
+    "update": "Update"
+  }
+}

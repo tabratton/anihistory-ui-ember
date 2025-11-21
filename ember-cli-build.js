@@ -25,7 +25,7 @@ module.exports = async function (defaults) {
   });
 
   function isProduction() {
-    return compatBuild(app, buildOnce);
+    return EmberApp.env() === 'production';
   }
 
   return compatBuild(app, buildOnce, {
