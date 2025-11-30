@@ -88,8 +88,8 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0(@babel/core@7.28.5)
       ember-auto-import:
-        specifier: ^2.11.2
-        version: 2.11.2(webpack@5.102.1)
+        specifier: ^2.12.0
+        version: 2.12.0(webpack@5.102.1)
       ember-basic-dropdown:
         specifier: ^8.8.0
         version: 8.8.0(@babel/core@7.28.5)(@ember/string@4.0.1)(@ember/test-helpers@5.4.1(@babel/core@7.28.5))(@glimmer/component@2.0.0)(ember-source@6.8.2(@glimmer/component@2.0.0)(rsvp@4.8.5))
@@ -3971,6 +3971,9 @@ packages:
   core-js-compat@3.46.0:
     resolution: {integrity: sha512-p9hObIIEENxSV8xIu+V68JjSeARg6UVMG5mR+JEUguG3sI6MsiS1njz2jHmyJDvA+8jX/sytkBHup6kxhM9law==}
 
+  core-js-compat@3.47.0:
+    resolution: {integrity: sha512-IGfuznZ/n7Kp9+nypamBhvwdwLsW6KC8IOaURw2doAK5e98AG3acVLdh0woOnEqCfUtS+Vu882JE4k/DAm3ItQ==}
+
   core-js@2.6.12:
     resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==}
     deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
@@ -4292,8 +4295,8 @@ packages:
   ember-assign-helper@0.5.1:
     resolution: {integrity: sha512-dXHbwlBTJWVjG7k4dhVrT3Gh4nQt6rC2LjyltuPztIhQ+YcPYHMqAPJRJYLGZu16aPSJbaGF8K+u51i7CLzqlQ==}
 
-  ember-auto-import@2.11.2:
-    resolution: {integrity: sha512-eR67ggmPQ6Upx6Smbur0HTRYqQshyxJMKPkWBHwWZmZ8sOA5piR0raL7ccKO0Hrn4ZEkp8ih24yAwvssb6K4NQ==}
+  ember-auto-import@2.12.0:
+    resolution: {integrity: sha512-J9wVTddnpx1ZPf6CgtMs8byp5t9ZZITUX9v+H+PgSDSgbYbDrVlKr2RGDfJLrnaTpuWwZqh1b54/9jLaERr6QA==}
     engines: {node: 12.* || 14.* || >= 16}
 
   ember-basic-dropdown@8.8.0:
@@ -9627,7 +9630,7 @@ snapshots:
       '@babel/core': 7.28.5
       '@babel/helper-plugin-utils': 7.27.1
       '@babel/helper-skip-transparent-expression-wrappers': 7.27.1
-      '@babel/plugin-transform-optional-chaining': 7.28.5(@babel/core@7.28.5)
+      '@babel/plugin-transform-optional-chaining': 7.23.4(@babel/core@7.28.5)
     transitivePeerDependencies:
       - supports-color
 
@@ -10211,12 +10214,12 @@ snapshots:
 
   '@babel/plugin-transform-object-rest-spread@7.23.4(@babel/core@7.28.5)':
     dependencies:
-      '@babel/compat-data': 7.28.5
+      '@babel/compat-data': 7.25.2
       '@babel/core': 7.28.5
       '@babel/helper-compilation-targets': 7.27.2
       '@babel/helper-plugin-utils': 7.27.1
       '@babel/plugin-syntax-object-rest-spread': 7.8.3(@babel/core@7.28.5)
-      '@babel/plugin-transform-parameters': 7.27.7(@babel/core@7.28.5)
+      '@babel/plugin-transform-parameters': 7.23.3(@babel/core@7.28.5)
 
   '@babel/plugin-transform-object-rest-spread@7.28.4(@babel/core@7.28.5)':
     dependencies:
@@ -10663,7 +10666,7 @@ snapshots:
       babel-plugin-polyfill-corejs2: 0.4.14(@babel/core@7.28.5)
       babel-plugin-polyfill-corejs3: 0.13.0(@babel/core@7.28.5)
       babel-plugin-polyfill-regenerator: 0.6.5(@babel/core@7.28.5)
-      core-js-compat: 3.46.0
+      core-js-compat: 3.47.0
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
@@ -12813,7 +12816,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.5
       '@babel/helper-define-polyfill-provider': 0.5.0(@babel/core@7.28.5)
-      core-js-compat: 3.46.0
+      core-js-compat: 3.35.1
     transitivePeerDependencies:
       - supports-color
 
@@ -13598,6 +13601,10 @@ snapshots:
     dependencies:
       browserslist: 4.28.0
 
+  core-js-compat@3.47.0:
+    dependencies:
+      browserslist: 4.28.0
+
   core-js@2.6.12: {}
 
   core-js@3.35.1: {}
@@ -13905,7 +13912,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-auto-import@2.11.2(webpack@5.102.1):
+  ember-auto-import@2.12.0(webpack@5.102.1):
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-proposal-class-properties': 7.18.6(@babel/core@7.28.5)
@@ -13914,6 +13921,7 @@ snapshots:
       '@babel/plugin-transform-class-static-block': 7.28.3(@babel/core@7.28.5)
       '@babel/preset-env': 7.28.5(@babel/core@7.28.5)
       '@embroider/macros': 1.19.4
+      '@embroider/reverse-exports': 0.2.0
       '@embroider/shared-internals': 2.9.1
       babel-loader: 8.4.1(@babel/core@7.28.5)(webpack@5.102.1)
       babel-plugin-ember-modules-api-polyfill: 3.5.0
@@ -14440,7 +14448,7 @@ snapshots:
       broccoli-source: 3.0.1
       calculate-cache-key-for-tree: 2.0.0
       cldr-core: 47.0.0
-      ember-auto-import: 2.11.2(webpack@5.102.1)
+      ember-auto-import: 2.12.0(webpack@5.102.1)
       ember-cli-babel: 8.2.0(@babel/core@7.28.5)
       ember-cli-typescript: 5.3.0
       extend: 3.0.2
