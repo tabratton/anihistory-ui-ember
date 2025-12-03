@@ -87,7 +87,7 @@
     "globals": "^16.5.0",
     "lightningcss": "^1.30.2",
     "node-zopfli-es": "^2.0.4",
-    "prettier": "^3.7.3",
+    "prettier": "^3.7.4",
     "prettier-plugin-ember-template-tag": "^2.1.2",
     "qunit": "^2.24.3",
     "qunit-dom": "^3.5.0",
