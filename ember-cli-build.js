@@ -24,30 +24,7 @@ module.exports = async function (defaults) {
     },
   });
 
-  function isProduction() {
-    return EmberApp.env() === 'production';
-  }
-
   return compatBuild(app, buildOnce, {
     staticInvokables: true,
-    packagerOptions: {
-      // publicAssetURL is used similarly to Ember CLI's asset fingerprint prepend option.
-      publicAssetURL: '/',
-      // Embroider lets us send our own options to the style-loader
-      cssLoaderOptions: {
-        // don't create source maps in production
-        sourceMap: isProduction() === false,
-        // enable CSS modules
-        modules: {
-          // global mode, can be either global or local
-          // we set to global mode to avoid hashing tailwind classes
-          mode: 'global',
-          // class naming template
-          localIdentName: isProduction()
-            ? '[sha512:hash:base64:5]'
-            : '[path][name]__[local]',
-        },
-      },
-    },
   });
 };

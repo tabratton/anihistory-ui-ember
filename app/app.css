@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "ember-power-select/vendor/ember-power-select";
+@import 'tailwindcss';
+@import 'ember-power-select/vendor/ember-power-select';
 
 @plugin "@tailwindcss/forms";
 
@@ -78,7 +78,7 @@
     @apply border-b;
   }
 
-  &[aria-current="true"] {
+  &[aria-current='true'] {
     @apply bg-main-700;
   }
 }

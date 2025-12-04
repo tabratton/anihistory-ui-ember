@@ -14,7 +14,7 @@ export default class UserRoute extends Route {
       error.messages.push(
         response.status === 404
           ? this.intl.t('messages.not_found')
-          : this.intl.t('messages.unavail'),
+          : this.intl.t('messages.unavail')
       );
     }
   }
@@ -64,7 +64,7 @@ export default class UserRoute extends Route {
         const lastItem = row?.[row.length - 1];
         const conflictInRow = lastItem
           ? Interval.fromDateTimes(lastItem.startDay, lastItem.endDay).overlaps(
-              Interval.fromDateTimes(listElement.startDay, listElement.endDay),
+              Interval.fromDateTimes(listElement.startDay, listElement.endDay)
             )
           : true;
 
@@ -157,7 +157,7 @@ export default class UserRoute extends Route {
             start: realStartDay.toLocaleString(),
             end: realEndDay.toLocaleString(),
             name: mapped.user_title,
-          }),
+          })
         );
       }
 
@@ -185,7 +185,7 @@ export default class UserRoute extends Route {
       }
     } else if (mappedList) {
       this.createGroupCategories(
-        mappedList.sort((a, b) => a.startDay - b.startDay),
+        mappedList.sort((a, b) => a.startDay - b.startDay)
       );
     }
 

@@ -31,7 +31,7 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0
       '@ember/string':
-        specifier: ^4.0.0
+        specifier: ^4.0.1
         version: 4.0.1
       '@ember/test-helpers':
         specifier: ^5.4.1
@@ -45,9 +45,15 @@ importers:
       '@embroider/core':
         specifier: ^4.4.0
         version: 4.4.0
+      '@embroider/legacy-inspector-support':
+        specifier: ^0.1.3
+        version: 0.1.3
       '@embroider/macros':
         specifier: ^1.19.5
         version: 1.19.5
+      '@embroider/router':
+        specifier: ^3.0.4
+        version: 3.0.6(@embroider/core@4.4.0)
       '@embroider/vite':
         specifier: ^1.4.3
         version: 1.4.3(@embroider/core@4.4.0)(rollup@4.53.3)(vite@7.2.6(@types/node@24.10.1)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1))
@@ -132,9 +138,6 @@ importers:
       ember-cli-deprecation-workflow:
         specifier: ^3.4.0
         version: 3.4.0(ember-source@6.8.2(@glimmer/component@2.0.0)(rsvp@4.8.5))
-      ember-cli-htmlbars:
-        specifier: ^7.0.0
-        version: 7.0.0(@babel/core@7.28.5)(ember-source@6.8.2(@glimmer/component@2.0.0)(rsvp@4.8.5))
       ember-concurrency:
         specifier: ^5.1.0
         version: 5.1.0(@babel/core@7.28.5)
@@ -193,11 +196,11 @@ importers:
         specifier: ^2.0.4
         version: 2.0.4
       prettier:
-        specifier: ^3.7.3
-        version: 3.7.3
+        specifier: ^3.7.4
+        version: 3.7.4
       prettier-plugin-ember-template-tag:
         specifier: ^2.1.2
-        version: 2.1.2(prettier@3.7.3)
+        version: 2.1.2(prettier@3.7.4)
       qunit:
         specifier: ^2.24.3
         version: 2.24.3
@@ -216,6 +219,9 @@ importers:
       tailwindcss:
         specifier: ^4.1.17
         version: 4.1.17
+      testem:
+        specifier: ^3.16.0
+        version: 3.16.0(handlebars@4.7.8)(underscore@1.13.7)
       tracked-built-ins:
         specifier: ^4.0.0
         version: 4.0.0(@babel/core@7.28.5)
@@ -1092,6 +1098,9 @@ packages:
     resolution: {integrity: sha512-s2qc5//C4TbhFvHroOnQ5A+mcnoMT9bgPLol+N7eiPbsk0jW8K+DNdNFmZ4GQfZnHHEF3zZb7+8qseI+tIrw3w==}
     engines: {node: 12.* || 14.* || >= 16}
 
+  '@embroider/legacy-inspector-support@0.1.3':
+    resolution: {integrity: sha512-0VzD1xExkT78a1CUiW8wZ5VZDL4bVyMSc3t8E/RiAW1X6TlyKIA/m6zoQgsQtQIiiTPPxH0/1Tdd0F7b5//etw==}
+
   '@embroider/macros@1.19.5':
     resolution: {integrity: sha512-zwpe7J9jyh8YPLzblk8WR3AQf6m+Ln/8Prlz9/DEwHD1m7GjJog1TIT0Sjv8guEj/hXCGntbNOzfE2Vj1T0Uug==}
     engines: {node: 12.* || 14.* || >= 16}
@@ -1104,6 +1113,14 @@ packages:
   '@embroider/reverse-exports@0.2.0':
     resolution: {integrity: sha512-WFsw8nQpHZiWGEDYpa/A79KEFfTisqteXbY+jg9eZiww1r1G+LZvsmdszDp86TkotUSCqrMbK/ewn0jR1CJmqg==}
     engines: {node: 12.* || 14.* || >= 16}
+
+  '@embroider/router@3.0.6':
+    resolution: {integrity: sha512-D+Us/ZwE1q1W7VHuq3tNDTavv9/uewh8IUFkMocve3X3rPYRiVzaw5G5wooX+409ng1W1ApLl7bxOwZHhYU9uQ==}
+    peerDependencies:
+      '@embroider/core': ^2.0.0||^3.0.0||^4.0.0-alpha.0
+    peerDependenciesMeta:
+      '@embroider/core':
+        optional: true
 
   '@embroider/shared-internals@2.9.1':
     resolution: {integrity: sha512-8PJBsa37GD++SAfHf8rcJzlwDwuAQCBo0fr+eGxg9l8XhBXsTnE/7706dM4OqWew9XNqRXn39wfIGHZoBpjNMw==}
@@ -1480,14 +1497,6 @@ packages:
   '@inquirer/figures@1.0.15':
     resolution: {integrity: sha512-t2IEY+unGHOzAaVM5Xx6DEWKeXlDDcNPeDyUpsRc6CUhBfU3VQOEl+Vssh7VNp1dR8MdUJBWhuObjXCsVpjN5g==}
     engines: {node: '>=18'}
-
-  '@isaacs/balanced-match@4.0.1':
-    resolution: {integrity: sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==}
-    engines: {node: 20 || >=22}
-
-  '@isaacs/brace-expansion@5.0.0':
-    resolution: {integrity: sha512-ZT55BDLV0yv0RBm2czMiZ+SqCGO7AvmOM3G/w2xhVPH+te0aKgFjmBvGlL1dH+ql2tgGO3MVrbb3jCKyvpgnxA==}
-    engines: {node: 20 || >=22}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -2082,9 +2091,6 @@ packages:
 
   '@types/minimatch@3.0.5':
     resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
-
-  '@types/minimatch@5.1.2':
-    resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
 
   '@types/node@24.10.1':
     resolution: {integrity: sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==}
@@ -3549,13 +3555,6 @@ packages:
   ember-cli-htmlbars@5.7.2:
     resolution: {integrity: sha512-Uj6R+3TtBV5RZoJY14oZn/sNPnc+UgmC8nb5rI4P3fR/gYoyTFIZSXiIM7zl++IpMoIrocxOrgt+mhonKphgGg==}
     engines: {node: 10.* || >= 12.*}
-
-  ember-cli-htmlbars@7.0.0:
-    resolution: {integrity: sha512-6BFxD19eZY+K62JLBDIKb8fXV29+QBrcT5QH4iHi8xseERX9SEWnYej9FpqL2QuoGjaTGml6QOvu9QlSTDYdVw==}
-    engines: {node: '>= 20'}
-    peerDependencies:
-      '@babel/core': '>= 7'
-      ember-source: '>= 4.0.0'
 
   ember-cli-is-package-missing@1.0.0:
     resolution: {integrity: sha512-9hEoZj6Au5onlSDdcoBqYEPT8ehlYntZPxH8pBKV0GO7LNel88otSAQsCfXvbi2eKE+MaSeLG/gNaCI5UdWm9g==}
@@ -5337,10 +5336,6 @@ packages:
     resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
     hasBin: true
 
-  minimatch@10.1.1:
-    resolution: {integrity: sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ==}
-    engines: {node: 20 || >=22}
-
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
@@ -5886,8 +5881,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.7.3:
-    resolution: {integrity: sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==}
+  prettier@3.7.4:
+    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -7042,10 +7037,6 @@ packages:
   walk-sync@3.0.0:
     resolution: {integrity: sha512-41TvKmDGVpm2iuH7o+DAOt06yyu/cSHpX3uzAwetzASvlNtVddgIjXIb2DfB/Wa20B1Jo86+1Dv1CraSU7hWdw==}
     engines: {node: 10.* || >= 12.*}
-
-  walk-sync@4.0.1:
-    resolution: {integrity: sha512-oXP3IlkfG9Mqdgqh3JGYTPAcryRQd1J1CJOxOgsri2I1MD6N+k4OqxEVP4ZQ0xyYJfYPhBVPRMUVK+N5f13+jQ==}
-    engines: {node: '>= 20.*'}
 
   walker@1.0.8:
     resolution: {integrity: sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==}
@@ -8853,6 +8844,12 @@ snapshots:
       - supports-color
       - utf-8-validate
 
+  '@embroider/legacy-inspector-support@0.1.3':
+    dependencies:
+      '@embroider/addon-shim': 1.10.2
+    transitivePeerDependencies:
+      - supports-color
+
   '@embroider/macros@1.19.5':
     dependencies:
       '@embroider/shared-internals': 3.0.1
@@ -8870,6 +8867,16 @@ snapshots:
     dependencies:
       mem: 8.1.1
       resolve.exports: 2.0.3
+
+  '@embroider/router@3.0.6(@embroider/core@4.4.0)':
+    dependencies:
+      '@ember/test-waiters': 4.1.1
+      '@embroider/addon-shim': 1.10.2
+    optionalDependencies:
+      '@embroider/core': 4.4.0
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
 
   '@embroider/shared-internals@2.9.1':
     dependencies:
@@ -9298,12 +9305,6 @@ snapshots:
       '@types/node': 24.10.1
 
   '@inquirer/figures@1.0.15': {}
-
-  '@isaacs/balanced-match@4.0.1': {}
-
-  '@isaacs/brace-expansion@5.0.0':
-    dependencies:
-      '@isaacs/balanced-match': 4.0.1
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -9984,8 +9985,6 @@ snapshots:
   '@types/mime@1.3.5': {}
 
   '@types/minimatch@3.0.5': {}
-
-  '@types/minimatch@5.1.2': {}
 
   '@types/node@24.10.1':
     dependencies:
@@ -11708,23 +11707,6 @@ snapshots:
       silent-error: 1.1.1
       strip-bom: 4.0.0
       walk-sync: 2.2.0
-    transitivePeerDependencies:
-      - supports-color
-
-  ember-cli-htmlbars@7.0.0(@babel/core@7.28.5)(ember-source@6.8.2(@glimmer/component@2.0.0)(rsvp@4.8.5)):
-    dependencies:
-      '@babel/core': 7.28.5
-      '@ember/edition-utils': 1.2.0
-      babel-plugin-ember-template-compilation: 2.4.1
-      broccoli-debug: 0.6.5
-      broccoli-persistent-filter: 3.1.3
-      broccoli-plugin: 4.0.7
-      ember-source: 6.8.2(@glimmer/component@2.0.0)(rsvp@4.8.5)
-      fs-tree-diff: 2.0.1
-      heimdalljs-logger: 0.1.10
-      js-string-escape: 1.0.1
-      silent-error: 1.1.1
-      walk-sync: 4.0.1
     transitivePeerDependencies:
       - supports-color
 
@@ -14101,10 +14083,6 @@ snapshots:
 
   mini-svg-data-uri@1.4.4: {}
 
-  minimatch@10.1.1:
-    dependencies:
-      '@isaacs/brace-expansion': 5.0.0
-
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.12
@@ -14631,17 +14609,17 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-ember-template-tag@2.1.2(prettier@3.7.3):
+  prettier-plugin-ember-template-tag@2.1.2(prettier@3.7.4):
     dependencies:
       '@babel/core': 7.28.5
       content-tag: 4.0.0
-      prettier: 3.7.3
+      prettier: 3.7.4
     transitivePeerDependencies:
       - supports-color
 
   prettier@2.8.8: {}
 
-  prettier@3.7.3: {}
+  prettier@3.7.4: {}
 
   printf@0.6.1: {}
 
@@ -16057,13 +16035,6 @@ snapshots:
       ensure-posix-path: 1.1.1
       matcher-collection: 2.0.1
       minimatch: 3.1.2
-
-  walk-sync@4.0.1:
-    dependencies:
-      '@types/minimatch': 5.1.2
-      ensure-posix-path: 1.1.1
-      matcher-collection: 2.0.1
-      minimatch: 10.1.1
 
   walker@1.0.8:
     dependencies:
