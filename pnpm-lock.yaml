@@ -38,13 +38,13 @@ importers:
         version: 5.4.1(@babel/core@7.28.5)
       '@embroider/compat':
         specifier: ^4.1.11
-        version: 4.1.11(@embroider/core@4.4.0)
+        version: 4.1.11(@embroider/core@4.4.1)
       '@embroider/config-meta-loader':
         specifier: ^1.0.0
         version: 1.0.0
       '@embroider/core':
-        specifier: ^4.4.0
-        version: 4.4.0
+        specifier: ^4.4.1
+        version: 4.4.1
       '@embroider/legacy-inspector-support':
         specifier: ^0.1.3
         version: 0.1.3
@@ -53,10 +53,10 @@ importers:
         version: 1.19.5
       '@embroider/router':
         specifier: ^3.0.6
-        version: 3.0.6(@embroider/core@4.4.0)
+        version: 3.0.6(@embroider/core@4.4.1)
       '@embroider/vite':
         specifier: ^1.4.4
-        version: 1.4.4(@embroider/core@4.4.0)(rollup@4.54.0)(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1))
+        version: 1.4.4(@embroider/core@4.4.1)(rollup@4.54.0)(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1))
       '@eslint/js':
         specifier: ^9.39.1
         version: 9.39.1
@@ -1094,8 +1094,8 @@ packages:
     resolution: {integrity: sha512-qznkdjgEGPe6NM94hZNXvOm/WhrJwBh8FtSQZ+nGjh9TOjY42tOiTEevFuM0onNXUn6bpdGzmjwKo2xY2jxQxQ==}
     engines: {node: 12.* || 14.* || >= 16}
 
-  '@embroider/core@4.4.0':
-    resolution: {integrity: sha512-s2qc5//C4TbhFvHroOnQ5A+mcnoMT9bgPLol+N7eiPbsk0jW8K+DNdNFmZ4GQfZnHHEF3zZb7+8qseI+tIrw3w==}
+  '@embroider/core@4.4.1':
+    resolution: {integrity: sha512-vC0S0enpbicrwR98hi7YKhnxPxFXsYsPnm8vpxschDepxBghUVenLl/7uiDHB9IzP+At/mkggllyjibnhqOCyw==}
     engines: {node: 12.* || 14.* || >= 16}
 
   '@embroider/legacy-inspector-support@0.1.3':
@@ -5621,6 +5621,9 @@ packages:
   nwsapi@2.2.22:
     resolution: {integrity: sha512-ujSMe1OWVn55euT1ihwCI1ZcAaAU3nxUiDwfDQldc51ZXaB9m2AyOn6/jh1BLe2t/G8xd6uKG1UBF2aZJeg2SQ==}
 
+  nwsapi@2.2.23:
+    resolution: {integrity: sha512-7wfH4sLbt4M0gCDzGE6vzQBo0bfTKjU7Sfpqy/7gs1qBfYz2vEJH6vXcBKpO3+6Yu1telwd0t9HpyOoLEQQbIQ==}
+
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
@@ -8862,7 +8865,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/compat@4.1.11(@embroider/core@4.4.0)':
+  '@embroider/compat@4.1.11(@embroider/core@4.4.1)':
     dependencies:
       '@babel/code-frame': 7.27.1
       '@babel/core': 7.28.5
@@ -8873,7 +8876,7 @@ snapshots:
       '@babel/preset-env': 7.28.5(@babel/core@7.28.5)
       '@babel/runtime': 7.28.4
       '@babel/traverse': 7.28.5
-      '@embroider/core': 4.4.0
+      '@embroider/core': 4.4.1
       '@embroider/macros': 1.19.5
       '@types/babel__code-frame': 7.0.6
       assert-never: 1.4.0
@@ -8917,7 +8920,7 @@ snapshots:
 
   '@embroider/config-meta-loader@1.0.0': {}
 
-  '@embroider/core@4.4.0':
+  '@embroider/core@4.4.1':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/parser': 7.28.5
@@ -8977,12 +8980,12 @@ snapshots:
       mem: 8.1.1
       resolve.exports: 2.0.3
 
-  '@embroider/router@3.0.6(@embroider/core@4.4.0)':
+  '@embroider/router@3.0.6(@embroider/core@4.4.1)':
     dependencies:
       '@ember/test-waiters': 4.1.1
       '@embroider/addon-shim': 1.10.2
     optionalDependencies:
-      '@embroider/core': 4.4.0
+      '@embroider/core': 4.4.1
     transitivePeerDependencies:
       - '@glint/template'
       - supports-color
@@ -9040,10 +9043,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/vite@1.4.4(@embroider/core@4.4.0)(rollup@4.54.0)(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1))':
+  '@embroider/vite@1.4.4(@embroider/core@4.4.1)(rollup@4.54.0)(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1))':
     dependencies:
       '@babel/core': 7.28.5
-      '@embroider/core': 4.4.0
+      '@embroider/core': 4.4.1
       '@embroider/macros': 1.19.5
       '@embroider/reverse-exports': 0.2.0
       '@rollup/pluginutils': 5.3.0(rollup@4.54.0)
@@ -13898,7 +13901,7 @@ snapshots:
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
       is-potential-custom-element-name: 1.0.1
-      nwsapi: 2.2.22
+      nwsapi: 2.2.23
       parse5: 7.3.0
       rrweb-cssom: 0.7.1
       saxes: 6.0.0
@@ -14552,6 +14555,8 @@ snapshots:
       set-blocking: 2.0.0
 
   nwsapi@2.2.22: {}
+
+  nwsapi@2.2.23: {}
 
   object-assign@4.1.1: {}
 
