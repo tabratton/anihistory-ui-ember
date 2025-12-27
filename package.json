@@ -100,7 +100,7 @@
     "stylelint-config-tailwindcss": "^1.0.0",
     "tailwindcss": "^4.1.17",
     "testem": "^3.17.0",
-    "tracked-built-ins": "^4.0.0",
+    "tracked-built-ins": "^4.1.0",
     "vite": "^7.3.0"
   },
   "engines": {
