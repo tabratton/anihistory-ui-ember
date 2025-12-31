@@ -1,6 +1,7 @@
 import { action } from '@ember/object';
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
+import { tKey } from 'ember-intl';
 import { DateTime, Interval } from 'luxon';
 
 export default class UserRoute extends Route {
@@ -13,8 +14,8 @@ export default class UserRoute extends Route {
       error.type = response.status === 404 ? 'NotFound' : 'Unavail';
       error.messages.push(
         response.status === 404
-          ? this.intl.t('messages.not_found')
-          : this.intl.t('messages.unavail')
+          ? this.intl.t(tKey('messages.not_found'))
+          : this.intl.t(tKey('messages.unavail'))
       );
     }
   }
@@ -153,11 +154,13 @@ export default class UserRoute extends Route {
       ) {
         error.type = 'DateRange';
         dateRangeErrors.push(
-          this.intl.t('messages.invalid_date', {
-            start: realStartDay.toLocaleString(),
-            end: realEndDay.toLocaleString(),
-            name: mapped.user_title,
-          })
+          this.intl.t(
+            tKey('messages.invalid_date', {
+              start: realStartDay.toLocaleString(),
+              end: realEndDay.toLocaleString(),
+              name: mapped.user_title,
+            })
+          )
         );
       }
 
@@ -181,7 +184,7 @@ export default class UserRoute extends Route {
     if (dateRangeErrors.length > 0) {
       if (error.type === 'DateRange') {
         error.messages.push(...dateRangeErrors);
-        error.messages.unshift(this.intl.t('messages.date_range'));
+        error.messages.unshift(this.intl.t(tKey('messages.date_range')));
       }
     } else if (mappedList) {
       this.createGroupCategories(

@@ -8,7 +8,7 @@ import {
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import BasicDropdownWormhole from 'ember-basic-dropdown/components/basic-dropdown-wormhole';
-import { t } from 'ember-intl';
+import { t, tKey } from 'ember-intl';
 import { pageTitle } from 'ember-page-title';
 import PowerSelect from 'ember-power-select/components/power-select';
 
@@ -26,7 +26,7 @@ import Button from '../components/button';
         @route="application"
         {{on "click" @controller.user.wipe}}
       >
-        {{t "project_name"}}
+        {{t (tKey "project_name")}}
       </LinkTo>
       {{#if @controller.user.selectedUser}}
         <div class="hidden md:flex items-center justify-between">
@@ -52,7 +52,7 @@ import Button from '../components/button';
             @searchEnabled={{true}}
             @selected={{@controller.user.selectedUser}}
             @onChange={{@controller.user.updateUser}}
-            @placeholder={{t "navigation-bar.username"}}
+            @placeholder={{t (tKey "navigation-bar.username")}}
             as |user|
           >
             <span class="w-10 flex items-center justify-center">
@@ -105,7 +105,7 @@ import Button from '../components/button';
             <section class="flex flex-nowrap items-center w-full p-4">
               <div class="relative flex-grow">
                 <label class="sr-only" for="user-search-2">
-                  {{t "navigation-bar.username"}}
+                  {{t (tKey "navigation-bar.username")}}
                 </label>
                 <PowerSelect
                   @triggerId="user-search-2"
@@ -113,7 +113,7 @@ import Button from '../components/button';
                   @searchEnabled={{true}}
                   @selected={{@controller.user.selectedUser}}
                   @onChange={{@controller.user.updateUser}}
-                  @placeholder={{t "navigation-bar.username"}}
+                  @placeholder={{t (tKey "navigation-bar.username")}}
                   @matchTriggerWidth={{false}}
                   as |user|
                 >

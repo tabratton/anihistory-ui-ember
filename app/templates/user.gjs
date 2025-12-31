@@ -1,7 +1,7 @@
 import { on } from '@ember/modifier';
 import FaIcon from '@fortawesome/ember-fontawesome/components/fa-icon';
 import { faArrowsRotate } from '@fortawesome/free-solid-svg-icons';
-import { t } from 'ember-intl';
+import { t, tKey } from 'ember-intl';
 import { eq } from 'ember-truth-helpers';
 
 import Button from '../components/button';
@@ -13,12 +13,12 @@ import Select from '../components/select';
   <div class="user rounded-md justify-self-stretch flex flex-col p-2 h-full">
     <div class="bg-white/7 p-4 text-white flex items-center justify-between">
       <h4 class="text-2xl font-bold">
-        {{t "chart.title"}}
+        {{t (tKey "chart.title")}}
       </h4>
       <div class="controls grid items-center justify-items-center">
         <div class="language text-center flex flex-col">
           <label class="sr-only" for="lang-select">
-            {{t "chart.language.title"}}
+            {{t (tKey "chart.language.title")}}
           </label>
           <div class="inline-block relative w-64">
             <Select
@@ -28,25 +28,25 @@ import Select from '../components/select';
               as |s|
             >
               <s.Option value="user" selected={{eq @controller.lang "user"}}>
-                {{t "chart.language.user"}}
+                {{t (tKey "chart.language.user")}}
               </s.Option>
               <s.Option
                 value="english"
                 selected={{eq @controller.lang "english"}}
               >
-                {{t "chart.language.english"}}
+                {{t (tKey "chart.language.english")}}
               </s.Option>
               <s.Option
                 value="romaji"
                 selected={{eq @controller.lang "romaji"}}
               >
-                {{t "chart.language.romaji"}}
+                {{t (tKey "chart.language.romaji")}}
               </s.Option>
               <s.Option
                 value="native"
                 selected={{eq @controller.lang "native"}}
               >
-                {{t "chart.language.native"}}
+                {{t (tKey "chart.language.native")}}
               </s.Option>
             </Select>
           </div>
@@ -76,7 +76,7 @@ import Select from '../components/select';
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {{t "messages.anilist_instructions"}}
+                {{t (tKey "messages.anilist_instructions")}}
               </a>
             {{/if}}
           </div>

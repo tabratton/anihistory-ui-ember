@@ -18,6 +18,7 @@ import am4themesAnimated from '@amcharts/amcharts4/themes/animated';
 import theme from '@amcharts/amcharts4/themes/spiritedaway';
 import { registerDestructor } from '@ember/destroyable';
 import { service } from '@ember/service';
+import { tKey } from 'ember-intl';
 import Modifier from 'ember-modifier';
 
 options.autoSetClassName = true;
@@ -90,25 +91,25 @@ export default class CreateChartAm4Modifier extends Modifier {
                   <h4 class="text-xl font-bold mb-2 text-center">{${lang}}</h4>
                   <span class="flex justify-between w-full">
                       <span class="font-bold mr-1">${this.intl.t(
-                        'chart.started'
+                        tKey('chart.started')
                       )}</span>
                       <span>{openDateX}</span>
                   </span>
                   <span class="flex justify-between w-full">
                       <span class="font-bold mr-1">${this.intl.t(
-                        'chart.finished'
+                        tKey('chart.finished')
                       )}</span>
                       <span>{displayEndDay}</span>
                   </span>
                   <span class="flex justify-between w-full">
                       <span class="font-bold mr-1">${this.intl.t(
-                        'chart.score'
+                        tKey('chart.score')
                       )}</span>
                       <span>{score}</span>
                   </span>
                   <span class="flex justify-between w-full">
                       <span class="font-bold mr-1">${this.intl.t(
-                        'chart.average'
+                        tKey('chart.average')
                       )}</span>
                       <span>{average}</span>
                   </span>
