@@ -43,8 +43,8 @@ importers:
         specifier: ^5.4.1
         version: 5.4.1(@babel/core@7.28.5)
       '@embroider/compat':
-        specifier: ^4.1.11
-        version: 4.1.11(@embroider/core@4.4.2)
+        specifier: ^4.1.12
+        version: 4.1.12(@embroider/core@4.4.2)
       '@embroider/config-meta-loader':
         specifier: ^1.0.0
         version: 1.0.0
@@ -1119,11 +1119,11 @@ packages:
     resolution: {integrity: sha512-EfI9cJ5/3QSUJtwm7x1MXrx3TEa2p7RNgSHefy7fvGm8/DP1xUFL25nST1NaHbHcqR1UhMlrTtv5iUIDoVzeQQ==}
     engines: {node: 12.* || 14.* || >= 16}
 
-  '@embroider/compat@4.1.11':
-    resolution: {integrity: sha512-o0dJkMUSoBwCwcWR8KSYN4G+QDlSpgoI/18258dWOqaG2bgdhc7R2tg9cUPr6z+23d5lUzDCrkJjCvQBL5bk5A==}
+  '@embroider/compat@4.1.12':
+    resolution: {integrity: sha512-lFvwT7NcflF94+WbtxATa/foo1JKwUQLZTczV6ceV5PbpEKpp4HaYlx9GA8P9fk+JwWLyHdSM9Buo/aEN7WgnQ==}
     engines: {node: 12.* || 14.* || >= 16}
     peerDependencies:
-      '@embroider/core': ^4.2.9
+      '@embroider/core': ^4.4.2
 
   '@embroider/config-meta-loader@1.0.0':
     resolution: {integrity: sha512-qznkdjgEGPe6NM94hZNXvOm/WhrJwBh8FtSQZ+nGjh9TOjY42tOiTEevFuM0onNXUn6bpdGzmjwKo2xY2jxQxQ==}
@@ -5693,9 +5693,6 @@ packages:
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     deprecated: This package is no longer supported.
 
-  nwsapi@2.2.22:
-    resolution: {integrity: sha512-ujSMe1OWVn55euT1ihwCI1ZcAaAU3nxUiDwfDQldc51ZXaB9m2AyOn6/jh1BLe2t/G8xd6uKG1UBF2aZJeg2SQ==}
-
   nwsapi@2.2.23:
     resolution: {integrity: sha512-7wfH4sLbt4M0gCDzGE6vzQBo0bfTKjU7Sfpqy/7gs1qBfYz2vEJH6vXcBKpO3+6Yu1telwd0t9HpyOoLEQQbIQ==}
 
@@ -7389,6 +7386,18 @@ packages:
       utf-8-validate:
         optional: true
 
+  ws@8.19.0:
+    resolution: {integrity: sha512-blAT2mjOEIi0ZzruJfIhb3nps74PRWTCz1IjglWEEpQl5XS/UNama6u2/rjFkDDouqr4L67ry+1aGIALViWjDg==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
   xdg-basedir@4.0.0:
     resolution: {integrity: sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==}
     engines: {node: '>=8'}
@@ -9020,7 +9029,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/compat@4.1.11(@embroider/core@4.4.2)':
+  '@embroider/compat@4.1.12(@embroider/core@4.4.2)':
     dependencies:
       '@babel/code-frame': 7.27.1
       '@babel/core': 7.28.5
@@ -9032,7 +9041,7 @@ snapshots:
       '@babel/runtime': 7.28.4
       '@babel/traverse': 7.28.5
       '@embroider/core': 4.4.2
-      '@embroider/macros': 1.19.5
+      '@embroider/macros': 1.19.6
       '@types/babel__code-frame': 7.0.6
       assert-never: 1.4.0
       babel-import-util: 3.0.1
@@ -10321,7 +10330,7 @@ snapshots:
 
   '@types/glob@9.0.0':
     dependencies:
-      glob: 13.0.0
+      glob: 8.1.0
 
   '@types/http-errors@2.0.5': {}
 
@@ -14145,7 +14154,7 @@ snapshots:
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.6
       is-potential-custom-element-name: 1.0.1
-      nwsapi: 2.2.22
+      nwsapi: 2.2.23
       parse5: 7.3.0
       rrweb-cssom: 0.8.0
       saxes: 6.0.0
@@ -14156,7 +14165,7 @@ snapshots:
       whatwg-encoding: 3.1.1
       whatwg-mimetype: 4.0.0
       whatwg-url: 14.2.0
-      ws: 8.18.3
+      ws: 8.19.0
       xml-name-validator: 5.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -14770,8 +14779,6 @@ snapshots:
       console-control-strings: 1.1.0
       gauge: 4.0.4
       set-blocking: 2.0.0
-
-  nwsapi@2.2.22: {}
 
   nwsapi@2.2.23: {}
 
@@ -16766,6 +16773,8 @@ snapshots:
   ws@8.17.1: {}
 
   ws@8.18.3: {}
+
+  ws@8.19.0: {}
 
   xdg-basedir@4.0.0: {}
 
