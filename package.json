@@ -99,7 +99,7 @@
     "qunit-dom": "^3.5.0",
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^39.0.1",
-    "stylelint-config-tailwindcss": "^1.0.0",
+    "stylelint-config-tailwindcss": "^1.0.1",
     "tailwindcss": "^4.1.18",
     "testem": "^3.17.0",
     "tracked-built-ins": "^4.1.0",
