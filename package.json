@@ -92,7 +92,7 @@
     "eslint-plugin-qunit": "^8.2.5",
     "globals": "^17.4.0",
     "lightningcss": "^1.30.2",
-    "node-zopfli-es": "^2.0.4",
+    "node-zopfli-es": "^2.0.5",
     "prettier": "^3.7.4",
     "prettier-plugin-ember-template-tag": "^2.1.2",
     "qunit": "^2.25.0",
