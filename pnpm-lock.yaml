@@ -62,7 +62,7 @@ importers:
         version: 3.0.6(@embroider/core@4.4.2)
       '@embroider/vite':
         specifier: ^1.5.0
-        version: 1.5.0(@embroider/core@4.4.2)(rollup@4.59.0)(vite@7.3.1(@types/node@25.3.5)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0))
+        version: 1.5.0(@embroider/core@4.4.2)(rollup@4.59.0)(vite@7.3.1(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0))
       '@eslint/js':
         specifier: ^9.39.2
         version: 9.39.2
@@ -89,7 +89,7 @@ importers:
         version: 0.5.11(tailwindcss@4.1.18)
       '@tailwindcss/vite':
         specifier: ^4.1.18
-        version: 4.1.18(vite@7.3.1(@types/node@25.3.5)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0))
+        version: 4.1.18(vite@7.3.1(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0))
       babel-plugin-ember-template-compilation:
         specifier: ^2.4.1
         version: 2.4.1
@@ -110,7 +110,7 @@ importers:
         version: 8.11.0(@babel/core@7.28.6)(@ember/string@4.0.1)(@ember/test-helpers@5.4.1(@babel/core@7.28.6))(@glimmer/component@2.0.0)(ember-source@6.9.0(@glimmer/component@2.0.0)(rsvp@4.8.5))
       ember-cli:
         specifier: ~6.9.1
-        version: 6.9.1(@types/node@25.3.5)(handlebars@4.7.8)(underscore@1.13.7)
+        version: 6.9.1(@types/node@25.4.0)(handlebars@4.7.8)(underscore@1.13.7)
       ember-cli-babel:
         specifier: ^8.2.0
         version: 8.2.0(@babel/core@7.28.6)
@@ -187,8 +187,8 @@ importers:
         specifier: ^12.7.5
         version: 12.7.5(@babel/core@7.28.6)(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-n:
-        specifier: ^17.23.1
-        version: 17.23.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
+        specifier: ^17.24.0
+        version: 17.24.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       eslint-plugin-qunit:
         specifier: ^8.2.5
         version: 8.2.5(eslint@9.39.2(jiti@2.6.1))
@@ -233,7 +233,7 @@ importers:
         version: 4.1.0(@babel/core@7.28.6)
       vite:
         specifier: ^7.3.1
-        version: 7.3.1(@types/node@25.3.5)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)
+        version: 7.3.1(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)
 
 packages:
 
@@ -1396,12 +1396,6 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@eslint-community/eslint-utils@4.9.0':
-    resolution: {integrity: sha512-ayVFHdtZ+hsq1t2Dy24wCmGXGe4q9Gu3smhLYALJrr473ZH27MsnSL+LKUlimp4BWJqMDMLmPpx/Q9R3OAlL4g==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
-
   '@eslint-community/eslint-utils@4.9.1':
     resolution: {integrity: sha512-phrYmNiYppR7znFEdqgfWHXR6NCkZEK7hwWDHZUjit/2/U0r6XvkDl0SYnoM51Hq7FhCGdLDT6zxCCOY1hexsQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -2244,8 +2238,8 @@ packages:
   '@types/node@25.0.3':
     resolution: {integrity: sha512-W609buLVRVmeW693xKfzHeIV6nJGGz98uCPfeXI1ELMLXVeKYZ9m15fAMSaUPBHYLGFsVRcMmSCksQOrZV9BYA==}
 
-  '@types/node@25.3.5':
-    resolution: {integrity: sha512-oX8xrhvpiyRCQkG1MFchB09f+cXftgIXb3a7UUa4Y3wpmZPw5tyZGTLWhlESOLq1Rq6oDlc8npVU2/9xiCuXMA==}
+  '@types/node@25.4.0':
+    resolution: {integrity: sha512-9wLpoeWuBlcbBpOY3XmzSTG3oscB6xjBEEtn+pYXTfhyXhIxC5FsBer2KTopBlvKEiW9l13po9fq+SJY/5lkhw==}
 
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
@@ -3909,14 +3903,6 @@ packages:
     resolution: {integrity: sha512-ZCkIjSYNDyGn0R6ewHDtXgns/Zre/NT6Agvq1/WobF7JXgFff4SeDroKiCO3fNJreU9YG429Sc81o4w5ok/W5g==}
     engines: {node: '>=10.2.0'}
 
-  enhanced-resolve@5.18.3:
-    resolution: {integrity: sha512-d4lC8xfavMeBjzGr2vECC3fsGXziXZQyJxD868h2M/mBI3PwAuODxAkLkq5HYuvrPYcUtiLzsTo8U3PgX3Ocww==}
-    engines: {node: '>=10.13.0'}
-
-  enhanced-resolve@5.18.4:
-    resolution: {integrity: sha512-LgQMM4WXU3QI+SYgEc2liRgznaD5ojbmY3sb8LxyguVkIg5FxdpTkvk72te2R38/TGKxH634oLxXRGY6d7AP+Q==}
-    engines: {node: '>=10.13.0'}
-
   enhanced-resolve@5.20.0:
     resolution: {integrity: sha512-/ce7+jQ1PQ6rVXwe+jKEg5hW5ciicHwIQUagZkp6IufBoY3YDgdTTY1azVs0qoRgVmvsNB+rbjLJxDAeHHtwsQ==}
     engines: {node: '>=10.13.0'}
@@ -4026,8 +4012,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-n@17.23.1:
-    resolution: {integrity: sha512-68PealUpYoHOBh332JLLD9Sj7OQUDkFpmcfqt8R9sySfFSeuGJjMTJQvCRRB96zO3A/PELRLkPrzsHmzEFQQ5A==}
+  eslint-plugin-n@17.24.0:
+    resolution: {integrity: sha512-/gC7/KAYmfNnPNOb3eu8vw+TdVnV0zhdQwexsw6FLXbhzroVj20vRn2qL8lDWDGnAQ2J8DhdfvXxX9EoxvERvw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.23.0'
@@ -4501,8 +4487,8 @@ packages:
     resolution: {integrity: sha512-w9UMqWwJxHNOvoNzSJ2oPF5wvYcvP7jUvYzhp67yEhTi17ZDBBC1z9pTdGuzjD+EFIqLSYRweZjqfiPzQ06Ebg==}
     engines: {node: '>= 0.4'}
 
-  get-tsconfig@4.13.0:
-    resolution: {integrity: sha512-1VKTZJCwBrvbd+Wn3AOgQP/2Av+TfTCOlE4AcRJE72W1ksZXbAx8PPBR9RzgTeSPzlPMHrbANMH3LbltH73wxQ==}
+  get-tsconfig@4.13.6:
+    resolution: {integrity: sha512-shZT/QMiSHc/YBLxxOkMtgSid5HFoauqCE3/exfsEcwg1WkeqjG+V40yBbBrsD+jW2HDXcs28xOfcbm2jI8Ddw==}
 
   get-uri@6.0.5:
     resolution: {integrity: sha512-b1O07XYq8eRuVzBNgJLstU6FYc1tS6wnMtF1I1D9lE8LxZSOGZ7LhxN54yPP6mGw5f2CkXY2BQUL9Fx41qvcIg==}
@@ -9375,7 +9361,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/vite@1.5.0(@embroider/core@4.4.2)(rollup@4.59.0)(vite@7.3.1(@types/node@25.3.5)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0))':
+  '@embroider/vite@1.5.0(@embroider/core@4.4.2)(rollup@4.59.0)(vite@7.3.1(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0))':
     dependencies:
       '@babel/core': 7.28.6
       '@embroider/core': 4.4.2
@@ -9394,7 +9380,7 @@ snapshots:
       send: 0.18.0
       source-map-url: 0.4.1
       terser: 5.44.1
-      vite: 7.3.1(@types/node@25.3.5)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)
+      vite: 7.3.1(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)
     transitivePeerDependencies:
       - '@glint/template'
       - bufferutil
@@ -9480,11 +9466,6 @@ snapshots:
 
   '@esbuild/win32-x64@0.27.3':
     optional: true
-
-  '@eslint-community/eslint-utils@4.9.0(eslint@9.39.2(jiti@2.6.1))':
-    dependencies:
-      eslint: 9.39.2(jiti@2.6.1)
-      eslint-visitor-keys: 3.4.3
 
   '@eslint-community/eslint-utils@4.9.1(eslint@9.39.2(jiti@2.6.1))':
     dependencies:
@@ -9795,12 +9776,12 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@inquirer/external-editor@1.0.3(@types/node@25.3.5)':
+  '@inquirer/external-editor@1.0.3(@types/node@25.4.0)':
     dependencies:
       chardet: 2.1.1
       iconv-lite: 0.7.0
     optionalDependencies:
-      '@types/node': 25.3.5
+      '@types/node': 25.4.0
 
   '@inquirer/figures@1.0.15': {}
 
@@ -10364,7 +10345,7 @@ snapshots:
   '@tailwindcss/node@4.1.18':
     dependencies:
       '@jridgewell/remapping': 2.3.5
-      enhanced-resolve: 5.18.4
+      enhanced-resolve: 5.20.0
       jiti: 2.6.1
       lightningcss: 1.30.2
       magic-string: 0.30.21
@@ -10422,12 +10403,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.18
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.18
 
-  '@tailwindcss/vite@4.1.18(vite@7.3.1(@types/node@25.3.5)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0))':
+  '@tailwindcss/vite@4.1.18(vite@7.3.1(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0))':
     dependencies:
       '@tailwindcss/node': 4.1.18
       '@tailwindcss/oxide': 4.1.18
       tailwindcss: 4.1.18
-      vite: 7.3.1(@types/node@25.3.5)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)
+      vite: 7.3.1(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0)
 
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
@@ -10507,7 +10488,7 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
-  '@types/node@25.3.5':
+  '@types/node@25.4.0':
     dependencies:
       undici-types: 7.18.2
 
@@ -12326,12 +12307,12 @@ snapshots:
   ember-cli-version-checker@5.1.2:
     dependencies:
       resolve-package-path: 3.1.0
-      semver: 7.7.3
+      semver: 7.7.4
       silent-error: 1.1.1
     transitivePeerDependencies:
       - supports-color
 
-  ember-cli@6.9.1(@types/node@25.3.5)(handlebars@4.7.8)(underscore@1.13.7):
+  ember-cli@6.9.1(@types/node@25.4.0)(handlebars@4.7.8)(underscore@1.13.7):
     dependencies:
       '@ember-tooling/blueprint-blueprint': 0.2.1
       '@ember-tooling/blueprint-model': 0.4.1
@@ -12387,7 +12368,7 @@ snapshots:
       heimdalljs-logger: 0.1.10
       http-proxy: 1.18.1
       inflection: 2.0.1
-      inquirer: 9.3.8(@types/node@25.3.5)
+      inquirer: 9.3.8(@types/node@25.4.0)
       is-git-url: 1.0.0
       is-language-code: 3.1.0
       isbinaryfile: 5.0.7
@@ -12714,16 +12695,6 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  enhanced-resolve@5.18.3:
-    dependencies:
-      graceful-fs: 4.2.11
-      tapable: 2.3.0
-
-  enhanced-resolve@5.18.4:
-    dependencies:
-      graceful-fs: 4.2.11
-      tapable: 2.3.0
-
   enhanced-resolve@5.20.0:
     dependencies:
       graceful-fs: 4.2.11
@@ -12875,7 +12846,7 @@ snapshots:
   eslint-compat-utils@0.5.1(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
-      semver: 7.7.3
+      semver: 7.7.4
 
   eslint-config-prettier@10.1.8(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
@@ -12905,17 +12876,17 @@ snapshots:
       eslint: 9.39.2(jiti@2.6.1)
       eslint-compat-utils: 0.5.1(eslint@9.39.2(jiti@2.6.1))
 
-  eslint-plugin-n@17.23.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3):
+  eslint-plugin-n@17.24.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3):
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.0(eslint@9.39.2(jiti@2.6.1))
-      enhanced-resolve: 5.18.3
+      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.2(jiti@2.6.1))
+      enhanced-resolve: 5.20.0
       eslint: 9.39.2(jiti@2.6.1)
       eslint-plugin-es-x: 7.8.0(eslint@9.39.2(jiti@2.6.1))
-      get-tsconfig: 4.13.0
+      get-tsconfig: 4.13.6
       globals: 15.15.0
       globrex: 0.1.2
       ignore: 5.3.2
-      semver: 7.7.3
+      semver: 7.7.4
       ts-declaration-location: 1.0.7(typescript@5.9.3)
     transitivePeerDependencies:
       - typescript
@@ -13606,7 +13577,7 @@ snapshots:
       es-errors: 1.3.0
       get-intrinsic: 1.3.0
 
-  get-tsconfig@4.13.0:
+  get-tsconfig@4.13.6:
     dependencies:
       resolve-pkg-maps: 1.0.0
 
@@ -13995,9 +13966,9 @@ snapshots:
       strip-ansi: 6.0.1
       through: 2.3.8
 
-  inquirer@9.3.8(@types/node@25.3.5):
+  inquirer@9.3.8(@types/node@25.4.0):
     dependencies:
-      '@inquirer/external-editor': 1.0.3(@types/node@25.3.5)
+      '@inquirer/external-editor': 1.0.3(@types/node@25.4.0)
       '@inquirer/figures': 1.0.15
       ansi-escapes: 4.3.2
       cli-width: 4.1.0
@@ -14264,7 +14235,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 25.3.5
+      '@types/node': 25.4.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -14901,7 +14872,7 @@ snapshots:
     dependencies:
       growly: 1.3.0
       is-wsl: 2.2.0
-      semver: 7.7.3
+      semver: 7.7.4
       shellwords: 0.1.1
       uuid: 8.3.2
       which: 2.0.2
@@ -16723,7 +16694,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@7.3.1(@types/node@25.3.5)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0):
+  vite@7.3.1(@types/node@25.4.0)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.46.0):
     dependencies:
       esbuild: 0.27.3
       fdir: 6.5.0(picomatch@4.0.3)
@@ -16732,7 +16703,7 @@ snapshots:
       rollup: 4.59.0
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 25.3.5
+      '@types/node': 25.4.0
       fsevents: 2.3.3
       jiti: 2.6.1
       lightningcss: 1.30.2
