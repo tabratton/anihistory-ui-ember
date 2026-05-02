@@ -1,6 +1,10 @@
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
 
+const translationModules = {
+  'en-us': () => import('virtual:ember-intl/translations/en-us'),
+};
+
 export default class Application extends Route {
   @service intl;
 
@@ -13,7 +17,7 @@ export default class Application extends Route {
     let translations;
     switch (locale) {
       case 'en-us':
-        translations = (await import('../../translations/en-us.json')).default;
+        translations = (await translationModules['en-us']()).default;
         break;
     }
 
