@@ -1,3 +1,4 @@
+import '@warp-drive/ember/install';
 import Application from 'anihistory-ui-ember/app';
 import config from 'anihistory-ui-ember/config/environment';
 import * as QUnit from 'qunit';
