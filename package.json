@@ -61,7 +61,7 @@
     "@glimmer/tracking": "^1.1.2",
     "@rollup/plugin-babel": "^6.1.0",
     "@tailwindcss/forms": "^0.5.11",
-    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindcss/vite": "^4.2.4",
     "@warp-drive/core": "~5.8.1",
     "@warp-drive/ember": "^5.8.1",
     "@warp-drive/json-api": "~5.8.1",
