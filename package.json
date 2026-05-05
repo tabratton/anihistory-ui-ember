@@ -111,7 +111,7 @@
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^39.0.1",
     "stylelint-config-tailwindcss": "^1.0.1",
-    "tailwindcss": "^4.1.18",
+    "tailwindcss": "^4.2.4",
     "testem": "^3.19.1",
     "vite": "^7.3.1"
   },
