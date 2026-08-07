@@ -2,9 +2,5 @@ allowBuilds:
   core-js: true
   esbuild: true
   node-zopfli-es: true
-onlyBuiltDependencies:
-  - '@tailwindcss/oxide'
-  - core-js
-  - es5-ext
-  - esbuild
-  - node-zopfli-es
+minimumReleaseAgeExclude:
+  - vite@8.2.1
