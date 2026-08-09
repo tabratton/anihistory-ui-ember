@@ -1,6 +1,6 @@
-@import 'tailwindcss';
-@import 'ember-basic-dropdown/vendor/ember-basic-dropdown.css';
-@import 'ember-power-select/vendor/ember-power-select.css';
+@import "tailwindcss";
+@import "ember-basic-dropdown/vendor/ember-basic-dropdown.css";
+@import "ember-power-select/vendor/ember-power-select.css";
 
 @plugin "@tailwindcss/forms";
 
@@ -79,7 +79,7 @@
     @apply border-b;
   }
 
-  &[aria-current='true'] {
+  &[aria-current="true"] {
     @apply bg-main-700;
   }
 }
