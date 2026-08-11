@@ -64,7 +64,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "babel-plugin-ember-template-compilation": "^4.0.0",
     "browserslist": "^4.28.7",
-    "concurrently": "^9.2.1",
+    "concurrently": "^10.0.4",
     "decorator-transforms": "^2.4.0",
     "ember-basic-dropdown": "^9.0.0",
     "ember-cli": "~6.12.0",
