@@ -60,8 +60,7 @@ export default class CreateChartAm4Modifier extends Modifier {
           .epochMilliseconds,
       );
       obj.endDay = new Date(
-        obj.endDay.toZonedDateTime(Temporal.Now.timeZoneId())
-          .epochMilliseconds,
+        obj.endDay.toZonedDateTime(Temporal.Now.timeZoneId()).epochMilliseconds,
       );
       obj.displayEndDay = new Date(
         obj.displayEndDay.toZonedDateTime(Temporal.Now.timeZoneId())

@@ -4,11 +4,12 @@ import { service } from '@ember/service';
 import { tKey } from 'ember-intl';
 
 function overlaps(start1, end1, start2, end2) {
-return (
-  Temporal.PlainDateTime.compare(start2, end1) <= 0 && Temporal.PlainDateTime.compare(end1, end2) <= 0
-) || (
-  Temporal.PlainDateTime.compare(start2, start1) <= 0 && Temporal.PlainDateTime.compare(start1, end2) <= 0
-);
+  return (
+    (Temporal.PlainDateTime.compare(start2, end1) <= 0 &&
+      Temporal.PlainDateTime.compare(end1, end2) <= 0) ||
+    (Temporal.PlainDateTime.compare(start2, start1) <= 0 &&
+      Temporal.PlainDateTime.compare(start1, end2) <= 0)
+  );
 }
 
 export default class UserRoute extends Route {
@@ -71,7 +72,12 @@ export default class UserRoute extends Route {
         // Find out if the last item in the row has a date range conflict
         const lastItem = row?.[row.length - 1];
         const conflictInRow = lastItem
-          ? overlaps(lastItem.startDay, lastItem.endDay, listElement.startDay, listElement.endDay)
+          ? overlaps(
+              lastItem.startDay,
+              lastItem.endDay,
+              listElement.startDay,
+              listElement.endDay,
+            )
           : true;
 
         // If no conflicts, add the current element to the row,
@@ -149,12 +155,12 @@ export default class UserRoute extends Route {
 
       realStartDay = realStartDay.round('day').add({ hours: 12 });
 
-      const realEndDay = (mapped.end_day || Temporal.Now.plainDateTimeISO()).round('day');
+      const realEndDay = (
+        mapped.end_day || Temporal.Now.plainDateTimeISO()
+      ).round('day');
       const chartEndDay = realEndDay.add({ days: 1, hours: 12 });
 
-      if (
-        Temporal.PlainDateTime.compare(chartEndDay, realStartDay) <= 0
-      ) {
+      if (Temporal.PlainDateTime.compare(chartEndDay, realStartDay) <= 0) {
         error.type = 'DateRange';
         dateRangeErrors.push(
           this.intl.t(
@@ -191,7 +197,9 @@ export default class UserRoute extends Route {
       }
     } else if (mappedList) {
       this.createGroupCategories(
-        mappedList.sort((a, b) => Temporal.PlainDateTime.compare(a.startDay, b.startDay)),
+        mappedList.sort((a, b) =>
+          Temporal.PlainDateTime.compare(a.startDay, b.startDay),
+        ),
       );
     }
 
