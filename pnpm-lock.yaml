@@ -11,9 +11,6 @@ importers:
       '@amcharts/amcharts4':
         specifier: ^4.10.40
         version: 4.10.40
-      luxon:
-        specifier: ^3.7.2
-        version: 3.7.2
     devDependencies:
       '@babel/core':
         specifier: ^7.29.0

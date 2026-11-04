@@ -55,9 +55,18 @@ export default class CreateChartAm4Modifier extends Modifier {
         color: colorSet.next(),
         ...item,
       };
-      obj.startDay = obj.startDay.toJSDate();
-      obj.endDay = obj.endDay.toJSDate();
-      obj.displayEndDay = obj.displayEndDay.toJSDate();
+      obj.startDay = new Date(
+        obj.startDay.toZonedDateTime(Temporal.Now.timeZoneId())
+          .epochMilliseconds,
+      );
+      obj.endDay = new Date(
+        obj.endDay.toZonedDateTime(Temporal.Now.timeZoneId())
+          .epochMilliseconds,
+      );
+      obj.displayEndDay = new Date(
+        obj.displayEndDay.toZonedDateTime(Temporal.Now.timeZoneId())
+          .epochMilliseconds,
+      );
       return obj;
     });
     internalChart.paddingRight = 30;

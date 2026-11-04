@@ -2,7 +2,14 @@ import { action } from '@ember/object';
 import Route from '@ember/routing/route';
 import { service } from '@ember/service';
 import { tKey } from 'ember-intl';
-import { DateTime, Interval } from 'luxon';
+
+function overlaps(start1, end1, start2, end2) {
+return (
+  Temporal.PlainDateTime.compare(start2, end1) <= 0 && Temporal.PlainDateTime.compare(end1, end2) <= 0
+) || (
+  Temporal.PlainDateTime.compare(start2, start1) <= 0 && Temporal.PlainDateTime.compare(start1, end2) <= 0
+);
+}
 
 export default class UserRoute extends Route {
   @service intl;
@@ -64,9 +71,7 @@ export default class UserRoute extends Route {
         // Find out if the last item in the row has a date range conflict
         const lastItem = row?.[row.length - 1];
         const conflictInRow = lastItem
-          ? Interval.fromDateTimes(lastItem.startDay, lastItem.endDay).overlaps(
-              Interval.fromDateTimes(listElement.startDay, listElement.endDay),
-            )
+          ? overlaps(lastItem.startDay, lastItem.endDay, listElement.startDay, listElement.endDay)
           : true;
 
         // If no conflicts, add the current element to the row,
@@ -112,7 +117,7 @@ export default class UserRoute extends Route {
         cover: e.media.coverImage.large,
         description: e.media.description,
         end_day: e.completedAt.year
-          ? DateTime.fromObject({
+          ? Temporal.PlainDateTime.from({
               year: e.completedAt.year,
               month: e.completedAt.month,
               day: e.completedAt.day,
@@ -124,7 +129,7 @@ export default class UserRoute extends Route {
         romaji: e.media.title.romaji,
         score: e.scoreRaw / 10,
         start_day: e.startedAt.year
-          ? DateTime.fromObject({
+          ? Temporal.PlainDateTime.from({
               year: e.startedAt.year,
               month: e.startedAt.month,
               day: e.startedAt.day,
@@ -139,18 +144,16 @@ export default class UserRoute extends Route {
       } else if (mapped.end_day) {
         realStartDay = mapped.end_day;
       } else {
-        realStartDay = new Date();
+        realStartDay = Temporal.Now.plainDateTimeISO();
       }
 
-      realStartDay = realStartDay.startOf('day').plus({ hours: 12 });
+      realStartDay = realStartDay.round('day').add({ hours: 12 });
 
-      const realEndDay = (mapped.end_day || DateTime.now()).startOf('day');
-      const chartEndDay = realEndDay.plus({ days: 1, hours: 12 });
+      const realEndDay = (mapped.end_day || Temporal.Now.plainDateTimeISO()).round('day');
+      const chartEndDay = realEndDay.add({ days: 1, hours: 12 });
 
       if (
-        chartEndDay - realStartDay < 0 ||
-        (chartEndDay.hasSame(realStartDay, 'day') &&
-          chartEndDay.hasSame(realStartDay, 'hour'))
+        Temporal.PlainDateTime.compare(chartEndDay, realStartDay) <= 0
       ) {
         error.type = 'DateRange';
         dateRangeErrors.push(
@@ -188,7 +191,7 @@ export default class UserRoute extends Route {
       }
     } else if (mappedList) {
       this.createGroupCategories(
-        mappedList.sort((a, b) => a.startDay - b.startDay),
+        mappedList.sort((a, b) => Temporal.PlainDateTime.compare(a.startDay, b.startDay)),
       );
     }
 
