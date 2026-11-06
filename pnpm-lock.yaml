@@ -58,8 +58,8 @@ importers:
         specifier: ^3.0.6
         version: 3.0.6(@babel/core@7.29.7(supports-color@10.2.2))(@embroider/core@4.6.3(supports-color@10.2.2))(supports-color@10.2.2)
       '@embroider/vite':
-        specifier: ^1.7.9
-        version: 1.7.9(@embroider/core@4.6.3(supports-color@10.2.2))(supports-color@10.2.2)(vite@8.2.1(@types/node@25.5.2)(esbuild@0.27.3)(jiti@2.7.0)(terser@5.46.1)(yaml@2.8.3))
+        specifier: ^1.7.10
+        version: 1.7.10(@embroider/core@4.6.3(supports-color@10.2.2))(supports-color@10.2.2)(vite@8.2.1(@types/node@25.5.2)(esbuild@0.27.3)(jiti@2.7.0)(terser@5.46.1)(yaml@2.8.3))
       '@eslint/js':
         specifier: ^9.39.5
         version: 9.39.5
@@ -1644,8 +1644,8 @@ packages:
     resolution: {integrity: sha512-IlxD8okTt9cRUFpJKD8gTuQUBuEflrhCUju1xZFdYvmGm5XVqHPfG4I6+bEdKb8NO92aqHxr9SYuYibDmpMM9w==}
     engines: {node: 12.* || 14.* || >= 16}
 
-  '@embroider/vite@1.7.9':
-    resolution: {integrity: sha512-TmatvdDPM4THy4wKA7JvTZa4sJSagQEZeFyeYQCxKBFcIcOxvtrDzDV9oPhv0+LPr+7XXqVOni593Io2m0xnMQ==}
+  '@embroider/vite@1.7.10':
+    resolution: {integrity: sha512-cKMjDQm7OgKJMHIlOX46sZtDDcN2ATKW4oZtBVewQHZKp7RYfCtl0MQFq88p2ruSa+d1OQ01GWg1ybdvCoFaoQ==}
     peerDependencies:
       '@embroider/core': ^4.6.3
       vite: '>= 5.2.0'
@@ -9327,7 +9327,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@embroider/vite@1.7.9(@embroider/core@4.6.3(supports-color@10.2.2))(supports-color@10.2.2)(vite@8.2.1(@types/node@25.5.2)(esbuild@0.27.3)(jiti@2.7.0)(terser@5.46.1)(yaml@2.8.3))':
+  '@embroider/vite@1.7.10(@embroider/core@4.6.3(supports-color@10.2.2))(supports-color@10.2.2)(vite@8.2.1(@types/node@25.5.2)(esbuild@0.27.3)(jiti@2.7.0)(terser@5.46.1)(yaml@2.8.3))':
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@embroider/core': 4.6.3(supports-color@10.2.2)
@@ -9337,7 +9337,7 @@ snapshots:
       browserslist: 4.29.5
       browserslist-to-esbuild: 2.1.1(browserslist@4.29.5)
       chalk: 5.6.2
-      content-tag: 4.1.1
+      content-tag: 4.2.1
       debug: 4.4.3(supports-color@10.2.2)
       fast-glob: 3.3.3
       fs-extra: 10.1.0
