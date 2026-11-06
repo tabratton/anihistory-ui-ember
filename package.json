@@ -66,7 +66,7 @@
     "concurrently": "^10.0.5",
     "decorator-transforms": "^2.4.0",
     "ember-basic-dropdown": "^9.0.1",
-    "ember-cli": "~6.12.0",
+    "ember-cli": "~7.3.0",
     "ember-cli-babel": "^8.3.2",
     "ember-cli-deploy": "^2.0.0",
     "ember-cli-deploy-build": "^3.0.0",
