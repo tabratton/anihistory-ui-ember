@@ -4,12 +4,27 @@ import { service } from '@ember/service';
 import { tKey } from 'ember-intl';
 
 function overlaps(start1, end1, start2, end2) {
-  return (
-    (Temporal.PlainDateTime.compare(start2, end1) <= 0 &&
-      Temporal.PlainDateTime.compare(end1, end2) <= 0) ||
-    (Temporal.PlainDateTime.compare(start2, start1) <= 0 &&
-      Temporal.PlainDateTime.compare(start1, end2) <= 0)
-  );
+  // start1-------------end1
+  //        start2-------------end2
+  const overlapsEnd =
+    Temporal.PlainDateTime.compare(start2, end1) <= 0 &&
+    Temporal.PlainDateTime.compare(end1, end2) <= 0;
+  //          start1-------------end1
+  // start2-------------end2
+  const overlapsStart =
+    Temporal.PlainDateTime.compare(start2, start1) <= 0 &&
+    Temporal.PlainDateTime.compare(start1, end2) <= 0;
+  //          start1------end1
+  // start2----------------------end2
+  const containsFirst =
+    Temporal.PlainDateTime.compare(start1, start2) >= 0 &&
+    Temporal.PlainDateTime.compare(end1, end2) <= 0;
+  // start1---------------------end1
+  //        start2------end2
+  const containsSecond =
+    Temporal.PlainDateTime.compare(start2, start1) >= 0 &&
+    Temporal.PlainDateTime.compare(end2, end1) <= 0;
+  return overlapsEnd || overlapsStart || containsFirst || containsSecond;
 }
 
 export default class UserRoute extends Route {
