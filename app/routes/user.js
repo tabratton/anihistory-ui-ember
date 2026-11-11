@@ -168,20 +168,24 @@ export default class UserRoute extends Route {
         realStartDay = Temporal.Now.plainDateTimeISO();
       }
 
-      realStartDay = realStartDay.round('day').add({ hours: 12 });
+      realStartDay = realStartDay.round('day');
 
       const realEndDay = (
         mapped.end_day || Temporal.Now.plainDateTimeISO()
       ).round('day');
-      const chartEndDay = realEndDay.add({ days: 1, hours: 12 });
+      const chartEndDay = realEndDay.add({
+        hours: 23,
+        minutes: 59,
+        seconds: 59,
+      });
 
       if (Temporal.PlainDateTime.compare(chartEndDay, realStartDay) <= 0) {
         error.type = 'DateRange';
         dateRangeErrors.push(
           this.intl.t(
             tKey('messages.invalid_date', {
-              start: realStartDay.toLocaleString(),
-              end: realEndDay.toLocaleString(),
+              start: realStartDay.toString(),
+              end: realEndDay.toString(),
               name: mapped.user_title,
             }),
           ),

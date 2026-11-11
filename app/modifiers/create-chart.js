@@ -84,6 +84,7 @@ export default class CreateChartAm4Modifier extends Modifier {
     const dateAxis = internalChart.xAxes.push(new DateAxis());
     dateAxis.renderer.minGridDistance = 70;
     dateAxis.tooltipDateFormat = 'yyyy-MM-dd';
+    dateAxis.baseInterval = { timeUnit: 'hour', count: 1 };
     dateAxis.renderer.fontSize = 12;
     dateAxis.renderer.labels.template.fill = color('#FFFFFF');
     dateAxis.renderer.labels.template.opacity = 0.87;
