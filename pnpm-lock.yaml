@@ -146,7 +146,7 @@ importers:
         version: 9.4.0(@babel/core@7.29.7(supports-color@10.2.2))(@ember/test-helpers@5.8.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2))
       ember-load-initializers:
         specifier: ^3.0.1
-        version: 3.0.1(ember-source@7.3.1(@glimmer/component@2.2.1)(supports-color@10.2.2))
+        version: 3.0.1(ember-source@7.4.0(@glimmer/component@2.2.1)(supports-color@10.2.2))
       ember-modifier:
         specifier: ^4.3.0
         version: 4.3.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
@@ -163,8 +163,8 @@ importers:
         specifier: ^13.2.0
         version: 13.2.0
       ember-source:
-        specifier: ~7.3.0
-        version: 7.3.1(@glimmer/component@2.2.1)(supports-color@10.2.2)
+        specifier: ~7.4.0
+        version: 7.4.0(@glimmer/component@2.2.1)(supports-color@10.2.2)
       ember-template-lint:
         specifier: ^7.9.4
         version: 7.9.4
@@ -3901,8 +3901,8 @@ packages:
     resolution: {integrity: sha512-89oVHVJwmLDvGvAUWgS87KpBoRhy3aZ6U0Ql6HOmU4TrPkyaa8pM0W81wj9cIwjYprcQtN9EwzZMHnq46+oUyw==}
     engines: {node: 8.* || 10.* || >= 12}
 
-  ember-source@7.3.1:
-    resolution: {integrity: sha512-SUW2wZdQmhDsabN253DxgYvZyZFWzcVD/Db6pjVRbm4uipz9G4GrpXyjCGzSlujXuYNDohdGe16NUEHbTTaUKQ==}
+  ember-source@7.4.0:
+    resolution: {integrity: sha512-E4qPgmFkfNnS99PJILflF/j0Mm/nqxlhYpdCkiFc7iE9/vBIGLCBFldntpgt3pV/8HB+/drMKVEWYWv+JADR4w==}
     engines: {node: '>= 20.19'}
     peerDependencies:
       '@glimmer/component': '>= 1.1.2'
@@ -11306,9 +11306,9 @@ snapshots:
     transitivePeerDependencies:
       - '@babel/core'
 
-  ember-load-initializers@3.0.1(ember-source@7.3.1(@glimmer/component@2.2.1)(supports-color@10.2.2)):
+  ember-load-initializers@3.0.1(ember-source@7.4.0(@glimmer/component@2.2.1)(supports-color@10.2.2)):
     dependencies:
-      ember-source: 7.3.1(@glimmer/component@2.2.1)(supports-color@10.2.2)
+      ember-source: 7.4.0(@glimmer/component@2.2.1)(supports-color@10.2.2)
 
   ember-modifier@4.3.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2):
     dependencies:
@@ -11357,7 +11357,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  ember-source@7.3.1(@glimmer/component@2.2.1)(supports-color@10.2.2):
+  ember-source@7.4.0(@glimmer/component@2.2.1)(supports-color@10.2.2):
     dependencies:
       '@babel/core': 7.29.7(supports-color@10.2.2)
       '@embroider/addon-shim': 1.11.0
