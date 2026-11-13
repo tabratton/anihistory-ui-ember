@@ -2,7 +2,6 @@ import { on } from '@ember/modifier';
 import FaIcon from '@fortawesome/ember-fontawesome/components/fa-icon';
 import { faArrowsRotate } from '@fortawesome/free-solid-svg-icons';
 import { t, tKey } from 'ember-intl';
-import { eq } from 'ember-truth-helpers';
 
 import Button from '../components/button';
 import Chart from '../components/chart';
