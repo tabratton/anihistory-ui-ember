@@ -170,14 +170,23 @@ export default class UserRoute extends Route {
 
       realStartDay = realStartDay.round('day');
 
-      const realEndDay = (
-        mapped.end_day || Temporal.Now.plainDateTimeISO()
-      ).round('day');
-      const chartEndDay = realEndDay.add({
-        hours: 23,
-        minutes: 59,
-        seconds: 59,
-      });
+      let realEndDay;
+      let chartEndDay;
+
+      if (mapped.end_day) {
+        realEndDay = mapped.end_day;
+        chartEndDay = realEndDay.with({
+          hour: 23,
+          minute: 59,
+          second: 59,
+        });
+      } else {
+        chartEndDay = Temporal.Now.plainDateTimeISO().with({
+          hour: 23,
+          minute: 59,
+          second: 59,
+        });
+      }
 
       if (Temporal.PlainDateTime.compare(chartEndDay, realStartDay) <= 0) {
         error.type = 'DateRange';

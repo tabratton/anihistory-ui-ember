@@ -62,10 +62,12 @@ export default class CreateChartAm4Modifier extends Modifier {
       obj.endDay = new Date(
         obj.endDay.toZonedDateTime(Temporal.Now.timeZoneId()).epochMilliseconds,
       );
-      obj.displayEndDay = new Date(
-        obj.displayEndDay.toZonedDateTime(Temporal.Now.timeZoneId())
-          .epochMilliseconds,
-      );
+      if (obj.displayEndDay) {
+        obj.displayEndDay = new Date(
+          obj.displayEndDay.toZonedDateTime(Temporal.Now.timeZoneId())
+            .epochMilliseconds,
+        );
+      }
       return obj;
     });
     internalChart.paddingRight = 30;
